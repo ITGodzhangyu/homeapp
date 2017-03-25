@@ -1,0 +1,49 @@
+.main{
+    @include flexbox();
+    @include flex-direction(column);
+    height:100%;
+    header{
+        height:.44rem;
+        background:#f66;
+        text-align:center;
+        width:100%;
+        @include flexbox();
+        line-height:.44rem;
+        @include align-content(center);
+        @include justify-content(center);
+    }
+    section{
+        flex:1;
+        background:gray;
+    }
+    footer{
+        height:.5rem;
+        background:#eee;
+        width:100%;
+        ul{
+            height:100%;
+            width:100%;
+            @include flexbox();
+            li{
+                @include flex();
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-content(center);
+                @include justify-content(center);
+                text-align:center;
+                a{
+                    font-weight: bold;
+                    color:rgba(0,0,0,0.5);
+                    &.active{
+                        color:rgba(0,0,0,1);
+                    }
+                }
+            }
+        }
+    }
+}
+@font-face {
+  font-family: yofont;  
+  src: url(/iconfont/iconfont.woff) format ("woff"),
+  url(/iconfont/iconfont.ttf) format ("truetype");
+}

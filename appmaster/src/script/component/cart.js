@@ -1,12 +1,18 @@
-var React=require("react");
+import React,{ Component } from "react"
 var ReactDOM=require("react-dom");
-var Cart=React.createClass({
-	render:function(){
+class Cart extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={
+			title:"购物车"
+		}
+	}
+	render(){
 		return (
-			<header>
+			<div>
 				<div className="hh">购物车</div>
-			</header>
+			</div>
 		)
 	}
-})
-module.exports=Cart;
+}
+export default Cart;

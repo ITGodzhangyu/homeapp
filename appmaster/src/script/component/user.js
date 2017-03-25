@@ -1,12 +1,18 @@
-var React=require("react");
+import React,{ Component } from "react"
 var ReactDOM=require("react-dom");
-var User=React.createClass({
-	render:function(){
+class User extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={
+			title:"用户"
+		}
+	}
+	render(){
 		return (
-			<header>
+			<div>
 				<div className="hh">我的</div>
-			</header>
+			</div>
 		)
 	}
-})
-module.exports=User;
+}
+export default User;

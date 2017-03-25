@@ -1,10 +1,9 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+var OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports = {
   entry: './src/script/app.js',
-
   output: {
     path: __dirname + '/build',
     // filename: 'app_[hash].js'
@@ -50,6 +49,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude:/node_modules/,
         loader: 'react-hot-loader!babel-loader'
       }
     ]
@@ -67,18 +67,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.ejs',
       filename: 'index.html',
-      title: '豆瓣电影'
+      title: 'app'
     }),
     new ExtractTextPlugin({
       // filename: 'app_[hash].css',
       filename: 'app.css',
       disable: false,
       allChunks: true
+    }),
+    new OpenBrowserPlugin({
+    	url:"http://localhost:9000"
     })
   ],
 
   externals: {
     'react': 'window.React',
-    'react-dom': 'window.ReactDOM'
+    'react-dom': 'window.ReactDOM',
+    'react-router':'window.ReactRouter'
   }
 }

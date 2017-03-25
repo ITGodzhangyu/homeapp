@@ -1,12 +1,18 @@
-var React=require("react");
+import React,{ Component } from "react"
 var ReactDOM=require("react-dom");
-var Kind=React.createClass({
-	render:function(){
+class Kind extends React.Component{
+	constructor(props){
+			super(props)
+			this.state={
+				title:"分类"
+			}
+	}
+	render(){
 		return (
-			<header>
+			<div>
 				<div className="hh">分类</div>
-			</header>
+			</div>
 		)
 	}
-})
+}
 module.exports=Kind;

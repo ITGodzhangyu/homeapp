@@ -1,4 +1,9 @@
-$base-color: red;
+@charset 'utf-8';
+@import "./usage/core/reset";
+@import './footer';
+@import './common';
+@import './home';
+$base-color: blue;
 body {
   background: $base-color;
 }
