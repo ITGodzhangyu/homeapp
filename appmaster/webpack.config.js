@@ -17,7 +17,7 @@ module.exports = {
     historyApiFallback: false,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'http://m.6688.com/shop/PageData/Product.ashx?t=0.04671677821021625&actType=GetCatalogNavigation',
         pathRewrite: {'^/api': ''}
       }
     }
@@ -83,6 +83,8 @@ module.exports = {
   externals: {
     'react': 'window.React',
     'react-dom': 'window.ReactDOM',
-    'react-router':'window.ReactRouter'
+    'react-router':'window.ReactRouter',
+    'react-redux':'window.ReactRedux',
+    'redux':'window.Redux'
   }
 }

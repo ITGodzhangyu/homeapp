@@ -3,13 +3,40 @@
         height:1.9rem;
         background:#fff;
     }
-    ul{
-        margin:.2rem;
-        li{
-            .homelist{
-                margin:.1rem 0;
-                height:1rem;
-                background:#fff;
+    .home_main{
+        ul{
+            margin:.2rem;
+            li{
+                .homelist{
+                    margin:.1rem 0;
+                    height:1rem;
+                    background:#fff;
+                }
+            }
+        }
+    }
+    
+    .home_promotion{
+        @include flexbox();
+        @include align-content(center);
+        @include justify-content(center);
+        a{
+            flex:1;
+            img{
+                width:100%;
+            }
+        }
+    }
+    .home_nav{
+        ul{
+            @include flexbox();
+            @include align-content(center);
+            @include justify-content(center);
+            li{
+                flex:1;
+                img{
+                    width:100%;
+                }
             }
         }
     }
