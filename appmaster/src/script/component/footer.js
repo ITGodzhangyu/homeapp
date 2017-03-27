@@ -4,6 +4,7 @@ import Home from "./home.js"
 import User from "./user.js"
 import Cart from "./cart.js"
 import Kind from "./kind.js"
+import Service from "./service.js"
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
 //class Index extends React.Component({})
 class Footer extends React.Component{
@@ -35,8 +36,13 @@ class Footer extends React.Component{
 								</Link>
 							</li>
 							<li>
-								<Link to="/kind" title="分类" onClick={this.addtitle.bind(this,"分类")} activeClassName="active">
-								<i className="yo-ico">&#xe610;</i><span>分类</span>
+								<Link to="/kind" title="导航" onClick={this.addtitle.bind(this,"导航")} activeClassName="active">
+								<i className="yo-ico">&#xe610;</i><span>导航</span>
+								</Link>
+							</li>
+							<li>
+								<Link to="/user" title="用户中心" onClick={this.addtitle.bind(this,"用户中心")} activeClassName="active">
+								<i className="yo-ico">&#xe605;</i><span>我的</span>
 								</Link>
 							</li>
 							<li>
@@ -45,8 +51,8 @@ class Footer extends React.Component{
 								</Link>
 							</li>
 							<li>
-								<Link to="/user" title="用户中心" onClick={this.addtitle.bind(this,"用户中心")} activeClassName="active">
-								<i className="yo-ico">&#xe605;</i><span>我的</span>
+								<Link to="/service"  title="客服" onClick={this.addtitle.bind(this,"客服")} activeClassName="active">
+								<i className="yo-ico">&#xe613;</i><span>客服</span>
 								</Link>
 							</li>
 						</ul>

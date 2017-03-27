@@ -768,6 +768,10 @@ a {
           .main footer ul li a.active {
             color: black; }
 
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont.woff) format "woff", url(/iconfont/iconfont.ttf) format "truetype"; }
+
 #root {
   height: 100%;
   width: 100%; }
@@ -864,10 +868,6 @@ a {
 /**
  * yo-header通用或全局扩展
  */
-@font-face {
-  font-family: yofont;
-  src: url(/iconfont/iconfont.woff) format("woff"), url(/iconfont/iconfont.ttf) format("truetype"); }
-
 .home .swiper {
   height: 1.9rem;
   background: #fff; }
