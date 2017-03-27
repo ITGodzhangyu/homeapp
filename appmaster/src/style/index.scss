@@ -32,18 +32,21 @@
                 @include justify-content(center);
                 text-align:center;
                 a{
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include align-content(center);
+                    @include justify-content(center);
                     font-weight: bold;
                     color:rgba(0,0,0,0.5);
+                    font-size:0.12rem;
+                    i{
+                        font-size:0.22rem;
+                    }
                     &.active{
-                        color:rgba(0,0,0,1);
+                        color:#f0660d;
                     }
                 }
             }
         }
     }
-}
-@font-face {
-  font-family: yofont;  
-  src: url(/iconfont/iconfont.woff) format ("woff"),
-  url(/iconfont/iconfont.ttf) format ("truetype");
 }

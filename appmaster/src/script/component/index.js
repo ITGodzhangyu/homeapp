@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import Home from "./home.js"
 import User from "./user.js"
 import Cart from "./cart.js"
-import Kind from "./kind.js"
+import Search from "./search.js"
 import Service from "./service.js"
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
 //class Index extends React.Component({})
@@ -32,27 +32,27 @@ class Footer extends React.Component{
 						<ul>
 							<li>
 								<Link to="/home" title="首页" onClick={this.addtitle.bind(this,"首页")} activeClassName="active">
-								<i className="yo-ico">&#xe6e4;</i><span>首页</span>
+								<i className="yo-ico">&#xe611;</i><span>首页</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/kind" title="导航" onClick={this.addtitle.bind(this,"导航")} activeClassName="active">
-								<i className="yo-ico">&#xe610;</i><span>导航</span>
+								<Link to="/search" title="导航" onClick={this.addtitle.bind(this,"导航")} activeClassName="active">
+								<i className="yo-ico">&#xe502;</i><span>导航</span>
 								</Link>
 							</li>
 							<li>
 								<Link to="/user" title="用户中心" onClick={this.addtitle.bind(this,"用户中心")} activeClassName="active">
-								<i className="yo-ico">&#xe605;</i><span>我的</span>
+								<i className="yo-ico">&#xe653;</i><span>我的</span>
 								</Link>
 							</li>
 							<li>
 								<Link to="/cart"  title="购物车" onClick={this.addtitle.bind(this,"购物车")} activeClassName="active">
-								<i className="yo-ico">&#xe613;</i><span>购物车</span>
+								<i className="yo-ico">&#xe66a;</i><span>购物车</span>
 								</Link>
 							</li>
 							<li>
 								<Link to="/service"  title="客服" onClick={this.addtitle.bind(this,"客服")} activeClassName="active">
-								<i className="yo-ico">&#xe613;</i><span>客服</span>
+								<i className="yo-ico">&#xe76a;</i><span>客服</span>
 								</Link>
 							</li>
 						</ul>
