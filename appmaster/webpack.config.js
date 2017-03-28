@@ -17,9 +17,8 @@ module.exports = {
     historyApiFallback: false,
     proxy: {
       '/api': {
-        target: 'http://m.6688.com/',
-        pathRewrite: {'^/api': ''},
-        changeOrigin: true
+        target: 'http://localhost:3000',
+        pathRewrite: {'^/api': ''}
       }
     }
   },
@@ -84,8 +83,6 @@ module.exports = {
   externals: {
     'react': 'window.React',
     'react-dom': 'window.ReactDOM',
-    'react-router':'window.ReactRouter',
-    'react-redux':'window.ReactRedux',
-    'redux':'window.Redux'
+    'react-router':'window.ReactRouter'
   }
 }
