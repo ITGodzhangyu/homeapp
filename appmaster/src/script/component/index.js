@@ -1,12 +1,6 @@
 import React,{ Component } from "react"
 import ReactDOM from "react-dom"
-import Home from "./home.js"
-import User from "./user.js"
-import Cart from "./cart.js"
-import Search from "./search.js"
-import Service from "./service.js"
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
-//class Index extends React.Component({})
 class Footer extends React.Component{
 	constructor(props){
 		super(props)
@@ -23,10 +17,14 @@ class Footer extends React.Component{
 		return (
 			<div className="main"> 
 				<header>
-					{this.state.title}
+					<img className="index-logo" src="http://m.6688.com/img/newIndex/201607/logo.png"/>
+					<div className="index-search">
+						<i className="yo-ico">&#xe502;</i>						
+					</div>
+					<i className="yo-ico">&#xe82e;</i>
 				</header>
-					<section>
-						{this.props.children}
+					<section >
+							{this.props.children}				
 					</section>
 					<footer>
 						<ul>
