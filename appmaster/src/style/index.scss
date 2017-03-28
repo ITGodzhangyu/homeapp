@@ -1,10 +1,15 @@
 .main{
     @include flexbox();
     @include flex-direction(column);
-    height:auto;
+    height:100%;
+    position:relative;
+    overflow: scroll;
     header{
+        position:absolute;
+        top:0;
+        z-index:100;
         height:.44rem;
-        background:#ffac0d;
+        background:rgba(255,172,13,0.5);
         text-align:center;
         width:100%;
         @include flexbox();
@@ -40,13 +45,23 @@
         }
     }
     section{
-        flex:1;
-        background:gray;
+        position:absolute;
+        top:0.44rem;
+        width:100%;
+        background:#fff;
+        overflow: scroll;
+        bottom:0.44rem;
+        .index_scroll{
+            position:absolute;
+        }
     }
     footer{
         height:.5rem;
-        background:#eee;
+        background:#fff;
         width:100%;
+        z-index:100;
+        position:fixed;
+        bottom:0;
         ul{
             height:100%;
             width:100%;

@@ -17,8 +17,9 @@ module.exports = {
     historyApiFallback: false,
     proxy: {
       '/api': {
-        target: 'http://m.6688.com/shop/PageData/Product.ashx?t=0.04671677821021625&actType=GetCatalogNavigation',
-        pathRewrite: {'^/api': ''}
+        target: 'http://m.6688.com/',
+        pathRewrite: {'^/api': ''},
+        changeOrigin: true
       }
     }
   },

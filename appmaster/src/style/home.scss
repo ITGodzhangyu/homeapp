@@ -1,7 +1,21 @@
 .home{
-    .swiper{
-        height:1.9rem;
+    background:#fff;
+    .home_swiper{
+        height:1.37rem;
         background:#fff;
+        div{
+            ul{  
+                .item{
+                height:1.37rem;
+                width:100%;
+                    img{
+                       width:100%;
+                       height:100%;
+                    }
+                }
+            }
+        }
+        
     }
     .home_main{
         ul{
@@ -32,12 +46,54 @@
             @include flexbox();
             @include align-content(center);
             @include justify-content(center);
+            @include flex-wrap(wrap);
             li{
-                flex:1;
+                width:0.8rem;
                 img{
                     width:100%;
                 }
             }
         }
+    }
+    .home_main{
+        width:100%;
+        .home_menu{
+            @include flexbox();
+            @include align-content(center);
+            @include justify-content(center);
+            height:0.4rem;
+            line-height:0.4rem;
+            hr{
+                height:0.01rem;
+                margin:0.19rem 0.09rem;
+                @include flex(1);
+                background:#ffac0d;
+                border:#ffac0d;
+            }
+            span{
+                color:#0066cc;
+            }
+        }
+        ul{
+            padding:0;
+            margin:0;
+           width:100%;
+           @include flexbox();
+           @include flex-wrap(wrap);
+           @include align-content(center);
+            @include justify-content(center);
+            .home_list{
+                width:1.5rem;
+                display:block;
+                border:1px solid #dcdcdc;
+                margin-left:0.03rem;
+                margin-bottom:0.03rem;
+                    img{
+                        width:99%;
+                        border:100px slide red;
+                    }
+                }
+        }
+        
     }
 }

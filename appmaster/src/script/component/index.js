@@ -1,12 +1,6 @@
 import React,{ Component } from "react"
 import ReactDOM from "react-dom"
-import Home from "./home.js"
-import User from "./user.js"
-import Cart from "./cart.js"
-import Search from "./search.js"
-import Service from "./service.js"
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
-//class Index extends React.Component({})
 class Footer extends React.Component{
 	constructor(props){
 		super(props)
@@ -29,8 +23,8 @@ class Footer extends React.Component{
 					</div>
 					<i className="yo-ico">&#xe82e;</i>
 				</header>
-					<section>
-						{this.props.children}
+					<section >
+							{this.props.children}				
 					</section>
 					<footer>
 						<ul>
