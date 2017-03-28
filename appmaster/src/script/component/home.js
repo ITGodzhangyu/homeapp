@@ -1,6 +1,7 @@
 import React,{ Component } from "react"
 import Carousel from '../../component_dev/carousel/src/'
 import Scroller from '../../component_dev/scroller/src/'
+import fetchData from '../util/fetch'
 var ReactDOM=require("react-dom");
 class Home extends React.Component{
 	constructor(props){
@@ -73,10 +74,8 @@ class Home extends React.Component{
 	componentDidMount() {
     let url = '/api/shop/PageData/Product.ashx?t=0.7169888249561978&actType=GetCatalogNavigation'
     let url2= '/api/shop/PageData/Product.ashx?t=0.7169888249561978&actType=GetBiBaiGoodsListTop80'
-    fetch(url)
-    .then(response=>response.text())
-   	.then(res=>{
-		 var data=eval(res)
+    fetchData(url,function(res){
+    	 var data=eval(res)
    		console.log(data)
         var list1=[],list2=[];
         for(var i=0;i<16;i++){
@@ -96,21 +95,17 @@ class Home extends React.Component{
           navlist1: nlist1,
           navlist2: nlist2
         })
-      
-	});
-	fetch(url2)
-    .then(response=>response.text())
-   	.then(res=>{
+    }.bind(this))
+	fetchData(url2,function(res){
 		var data=eval(res)
    		console.log(data)
        let hlist=data.map(val=>{
-       			return (<li className="home_list"><img src={val.goodsImg}/></li>)
+       		return (<li className="home_list"><img src={val.goodsImg}/></li>)
        })
        this.setState({     
           homelist: hlist
         })
-	})
+	}.bind(this))
   }
-	
 }
 export default Home;
