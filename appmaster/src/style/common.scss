@@ -1,10 +1,10 @@
 #root{
     height:100%;
     width:100%;
+     background:#fff;
 }
 @import "./usage/fragment/yo-header";
 @font-face {
   font-family: yofont;
   src: url(/iconfont/iconfont.woff) format("woff"), url(/iconfont/iconfont.ttf) format("truetype"); 
 }
-

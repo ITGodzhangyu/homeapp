@@ -6,13 +6,13 @@ import Search from "./component/search.js"
 import Service from "./component/service.js"
 import React from 'react'
 import ReactDOM from 'react-dom'
-import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
+import  {Router,Route,IndexRoute,IndexRedirect,Link,hashHistory} from 'react-router'
 import Index from './component/index'
 import '../style/app.scss'
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
-			<IndexRoute component={Home}></IndexRoute>
+			<IndexRedirect to="/home"></IndexRedirect>
 			<Route path="home" component={Home}></Route>
 			<Route path="cart" component={Cart}></Route>
 			<Route path="search" component={Search}></Route>
