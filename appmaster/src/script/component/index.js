@@ -5,6 +5,8 @@ import User from "./user.js"
 import Cart from "./cart.js"
 import Search from "./search.js"
 import Service from "./service.js"
+
+
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
 //class Index extends React.Component({})
 class Footer extends React.Component{
@@ -22,9 +24,9 @@ class Footer extends React.Component{
 	render(){
 		return (
 			<div className="main"> 
-				<header>
-					{this.state.title}
-				</header>
+					<header>
+						{this.state.title}
+					</header>
 					<section>
 						{this.props.children}
 					</section>
@@ -36,12 +38,12 @@ class Footer extends React.Component{
 								</Link>
 							</li>
 							<li>
-								<Link to="/search" title="导航" onClick={this.addtitle.bind(this,"导航")} activeClassName="active">
+								<Link to="/search" title="" onClick={this.addtitle.bind(this,"搜索")} activeClassName="active">
 								<i className="yo-ico">&#xe502;</i><span>导航</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/user" title="用户中心" onClick={this.addtitle.bind(this,"用户中心")} activeClassName="active">
+								<Link to="/user" title="用户中心" onClick={this.addtitle.bind(this,"我的")} activeClassName="active">
 								<i className="yo-ico">&#xe653;</i><span>我的</span>
 								</Link>
 							</li>

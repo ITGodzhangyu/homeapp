@@ -1,0 +1,107 @@
+@import './user-login-register';
+@import './user-help';
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfontuser.woff) format("woff"),
+   url(/iconfont/iconfontuser.ttf) format("truetype"); 
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 263403 */
+  src: url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.eot');
+  src: url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.svg#iconfont') format('svg');
+}
+.ifont{
+    font-family: 'iconfont';
+}
+.user-header{
+    background: #fff;
+    font-weight: normal;
+}
+@include yo-header(
+  $name: user,
+  $bgcolor: #fff,
+  $border-width: 0,
+  $item-ico-color: #000,
+  $font-size: 20px,
+  $color:#000
+)
+.user-banner{
+    background:#f00;
+    width: 100%;
+    height: 116px;
+    @include flexbox();
+    @include align-items(center);
+    .user-box{
+        width: 100%;
+        height: 116px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(space-between);
+    }
+}
+
+.user-content{
+     background:#ebebeb;
+     .user-banner{
+        background:#f00;
+        width: 100%;
+        height: 116px;
+        @include flexbox();
+        @include align-items(center);
+        .user-box{
+            width: 100%;
+            height: 60px;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            @include align-items(center);
+            p{
+                font-size: 16px;
+                color: #fff;
+            }
+            .box{
+                width: 110px;
+                height: 30px;
+                background: #f9e3c1;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 16px;
+                a{
+                  color: #452a00;
+                }
+            }
+        }
+    }
+    .user-list{
+        margin-top: 13px;
+        width: 100%;
+        height: auto;
+        ul{
+            width: 100%;
+            height: auto;
+            background: #fff;
+            li{
+                width: 100%;
+                height: 52px;
+                @include border(0 0 2px 0,#ebebeb);
+                a{
+                    display:block;
+                    color: #000;
+                    width: 100%;
+                    line-height: 52px;
+                    font-size: 18px;
+                }
+                span{
+                    color: #ebebeb;
+                    font-weight: bold;
+                    float: right;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

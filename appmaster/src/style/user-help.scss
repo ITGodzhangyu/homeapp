@@ -1,0 +1,29 @@
+section{
+    overflow-y: auto;
+    .user-help{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        ul{
+            width: 96%;
+            margin-left: 2%;
+            li{
+                width: 100%;
+                height:auto;
+                background: #fff;
+                margin-bottom: 10px;
+                span{
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    background: #f3f3f3;
+                    padding: 0 10px;
+                }
+                p{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
