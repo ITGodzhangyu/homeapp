@@ -2,6 +2,10 @@
 @import './user-help';
 @import './user-address';
 @import './user-order';
+header.yo-header{
+    font-size: 16px;
+}
+
 .user-header{
     background: #fff;
     font-weight: normal;

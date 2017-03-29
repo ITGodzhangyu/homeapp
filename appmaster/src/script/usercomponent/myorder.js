@@ -1,7 +1,7 @@
 import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
-
+import { Link, browserHistory } from 'react-router'
 class Myorder extends React.Component{
 	constructor(props){
 		super(props)
@@ -13,8 +13,8 @@ class Myorder extends React.Component{
 		return (
 			<div className='main'>
 				<header className="yo-header yo-header-c">
-				<p className="title">我的订单</p>
-				<a className="regret yo-ico">&#xe639;</a>
+				<p className="title">{this.props.value}</p>
+				<a className="regret yo-ico" onClick={this.back}>&#xe639;</a>
 				</header>
 				<section>
 					123
@@ -22,7 +22,9 @@ class Myorder extends React.Component{
 			</div>
 		)
 	}
-	
+	back() {
+   		 browserHistory.goBack()
+  	}
 	componentDidMount() {
 	    let title = '我的订单'
 	    this.props.onChange({

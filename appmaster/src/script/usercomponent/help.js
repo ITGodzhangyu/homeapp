@@ -1,6 +1,8 @@
 import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
+import { Link, browserHistory } from 'react-router'
+
 
 class Help extends React.Component{
 	constructor(props){
@@ -14,7 +16,7 @@ class Help extends React.Component{
 			<div className="main">
 		          <header className="yo-header yo-header-c">
 		            <p className="title">{this.props.value}</p>
-		            <span className="regret yo-ico">&#xe639;</span>
+		            <span className="regret yo-ico" onClick={this.back}>&#xe639;</span>
 	       		 </header>
 	       		 <section>
 	       		 	<div className="user-help">
@@ -42,6 +44,10 @@ class Help extends React.Component{
 			
 		)
 	}
+	
+	back() {
+   		 browserHistory.goBack()
+  	}
 	componentDidMount() {
 	    let title = '我的收藏'
 	    this.props.onChange({

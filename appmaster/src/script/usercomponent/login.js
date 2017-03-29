@@ -1,4 +1,6 @@
 import React,{ Component } from "react"
+import { connect } from 'react-redux'
+import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 
 class Login extends React.Component{
 	constructor(props){
@@ -24,20 +26,38 @@ class Login extends React.Component{
 	}
 	render(){
 		return (
-			<div className='user-login'>
-				<div className='login-username'><span className='user ifont'>&#xe61b;</span><input 	ref="username" type="text" placeholder='请输入手机号/邮箱'/></div>
-				<div className='login-password'><span className="ifont">&#xe615;</span><input ref="password" type="password" placeholder='请输入密码'/></div>
-				<div className='tab'><span className="toRegister"><a href='#/register'>立即注册</a></span><button onClick={this.login}>登陆</button></div>
-				<p><a href="#">忘记密码</a></p>
-				<h5>第三方登陆账号快速登陆</h5>
-				<div className="weibo">
-					<a href="#"><img /></a>
-				</div>
+			<div className='main'>
+				<header className="yo-header yo-header-c">
+				<p className="title">{this.props.value}</p>
+				<a className="regret yo-ico">&#xe639;</a>
+				</header>
+				<section>
+					123
+				</section>
 			</div>
 		)
 	}
-	componentDidMount(){
-		console.log(0)
-	}
+	componentDidMount() {
+	    let title = '登陆'
+	    this.props.onChange({
+	      type: 'SETTITLE',
+	      title: title
+	    })
+	 }
 }
-export default Login
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login)
+
+
+//<div className='user-login'>
+//						<div className='login-username'><span className='user ifont'>&#xe61b;</span><input 	ref="username" type="text" placeholder='请输入手机号/邮箱'/></div>
+//						<div className='login-password'><span className="ifont">&#xe615;</span><input ref="password" type="password" placeholder='请输入密码'/></div>
+//						<div className='tab'><span className="toRegister"><a href='#/register'>立即注册</a></span><button onClick={this.login}>登陆</button></div>
+//						<p><a href="#">忘记密码</a></p>
+//						<h5>第三方登陆账号快速登陆</h5>
+//						<div className="weibo">
+//							<a href="#"><img /></a>
+//						</div>
+//					</div>
