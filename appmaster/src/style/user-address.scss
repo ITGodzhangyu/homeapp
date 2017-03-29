@@ -1,0 +1,35 @@
+.newaddress{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    div.line{
+        width: 96%;
+        height: 30px;
+        padding: 0 2%;
+        line-height: 30px;
+        margin-bottom: 20px;
+        span{
+            float: left;
+            margin-right: 10px;
+            width: 76px;
+            text-align: right;
+        }
+        div{
+            float: left;
+            width: 75%;
+            height: 30px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+            input{
+                width: 98%;
+                float: right;
+                height: 100%;
+                border: none;
+            }
+        }
+    }
+}
+
+

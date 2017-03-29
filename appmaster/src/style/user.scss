@@ -1,21 +1,7 @@
 @import './user-login-register';
 @import './user-help';
-@font-face {
-  font-family: yofont;
-  src: url(/iconfont/iconfontuser.woff) format("woff"),
-   url(/iconfont/iconfontuser.ttf) format("truetype"); 
-}
-@font-face {
-  font-family: 'iconfont';  /* project id 263403 */
-  src: url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.eot');
-  src: url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_s7d3al4v7s49ggb9.svg#iconfont') format('svg');
-}
-.ifont{
-    font-family: 'iconfont';
-}
+@import './user-address';
+@import './user-order';
 .user-header{
     background: #fff;
     font-weight: normal;
@@ -105,3 +91,4 @@
         }
     }
 }
+

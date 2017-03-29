@@ -16,12 +16,15 @@ import Newaddress from "./usercomponent/newaddress.js"
 
 
 
+import { store } from './redux/store'
+import {Provider} from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
 import Index from './component/index'
 import '../style/app.scss'
 ReactDOM.render(
+	<Provider store={store}>
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
 			<IndexRoute component={Home}></IndexRoute>
@@ -30,16 +33,18 @@ ReactDOM.render(
 			<Route path="search" component={Search}></Route>
 			<Route path="user" component={User}></Route>
 			<Route path="service" component={Service}></Route>
-			<Route path="collect" component={Collect}/>
-			<Route path="account" component={Account}/>
-			<Route path="history" component={Historyorder}/>
-			<Route path="help" component={Help}/>
-			<Route path="myorder" component={Myorder}/>
-			<Route path="address" component={Address}/>
-			<Route path="login" component={Login}/>
-			<Route path="register" component={Register}/>
 		</Route>
-	</Router>,
+		<Route path="/myorder" component={Myorder}/>
+		<Route path="/collect" component={Collect}/>
+		<Route path="/account" component={Account}/>
+		<Route path="/history" component={Historyorder}/>
+		<Route path="/help" component={Help}/>
+		<Route path="/address" component={Address}/>
+		<Route path="/login" component={Login}/>
+		<Route path="/register" component={Register}/>
+		<Route path="/newaddress" component={Newaddress}/>
+	</Router>
+	</Provider>,
 	document.getElementById("root")
 )
 

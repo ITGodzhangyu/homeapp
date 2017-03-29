@@ -9,7 +9,7 @@ import Myorder from "../usercomponent/myorder"
 import Collect from "../usercomponent/collect"
 import Login from "../usercomponent/login"
 import Register from "../usercomponent/register"
-import Newaddress from "../usercomponent/newaddress"
+
 
 var ReactDOM=require("react-dom");
 class User extends React.Component{
@@ -29,12 +29,12 @@ class User extends React.Component{
 				</div>
 				<div className="user-list">
 					<ul>
-						<li><Link to="/myorder">我的订单<span className="ifont">&#xe608;</span></Link></li>
-						<li><Link to="/history">历史订单<span className="ifont">&#xe608;</span></Link></li>
-						<li><Link to="/collect">我的收藏<span className="ifont">&#xe608;</span></Link></li>
-						<li><Link to="/address">我的地址<span className="ifont">&#xe608;</span></Link></li>
-						<li><Link to="/account">我的账户<span className="ifont">&#xe608;</span></Link></li>
-						<li><Link to="/help">帮助中心<span className="ifont">&#xe608;</span></Link></li>
+						<li><Link to="/myorder">我的订单<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/history">历史订单<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/collect">我的收藏<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/address">我的地址<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/account">我的账户<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/help">帮助中心<span className="yo-ico">&#xe608;</span></Link></li>
 					</ul>
 				</div>
 				
