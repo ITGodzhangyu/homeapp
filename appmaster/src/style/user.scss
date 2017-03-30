@@ -1,0 +1,108 @@
+@import './user-login-register';
+@import './user-help';
+@import './user-address';
+@import './user-order';
+@import './user-collect';
+header.yo-header{
+    font-size: 16px;
+}
+
+.user-header{
+    background: #fff;
+    font-weight: normal;
+}
+@include yo-header(
+  $name: user,
+  $bgcolor: #fff,
+  $border-width: 0,
+  $item-ico-color: #000,
+  $font-size: 20px,
+  $color:#000
+)
+.user-banner{
+    background:#f00;
+    width: 100%;
+    height: 116px;
+    @include flexbox();
+    @include align-items(center);
+    background: url(/img/headBG.jpg);
+    .user-box{
+        width: 100%;
+        height: 116px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.user-content{
+     background:#ebebeb;
+     .user-banner{
+        width: 100%;
+        height: 116px;
+        @include flexbox();
+        @include align-items(center);
+        .user-box{
+            width: 100%;
+            height: 60px;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            @include align-items(center);
+            p{
+                font-size: 16px;
+                color: #fff;
+            }
+            .box{
+                width: 110px;
+                height: 30px;
+                background: #f9e3c1;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 16px;
+                a{
+                  color: #452a00;
+                }
+            }
+        }
+    }
+    .user-list{
+        margin-top: 13px;
+        width: 100%;
+        height: auto;
+        ul{
+            width: 100%;
+            height: auto;
+            background: #fff;
+            li{
+                width: 100%;
+                height: 52px;
+                @include border(0 0 2px 0,#ebebeb);
+                a{
+                    display:block;
+                    color: #000;
+                    width: 100%;
+                    line-height: 52px;
+                    font-size: 18px;
+                    img{
+                        width: 33px;
+                        height: 33px;
+                        margin: 0 6px;
+                    }
+                }
+                span{
+                    color: #ebebeb;
+                    font-weight: bold;
+                    float: right;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+

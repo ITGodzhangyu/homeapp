@@ -60,6 +60,7 @@ class kindList extends React.Component{
 		      	let flist=data.map(val=>{
 		       		return (<li>
 			       			<List.LazyImage  className="goodsImg" src={val.goodsImg}/>
+			       			<p>{val.catalogName}</p>
 			       			<div className="goodsPrice">
 			       				<span>{val.Price}</span>
 			       				<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
