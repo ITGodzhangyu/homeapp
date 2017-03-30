@@ -887,6 +887,10 @@ a {
   font-family: yofont;
   src: url(/iconfont/iconfontuser.woff) format("woff"), url(/iconfont/iconfontuser.ttf) format("truetype"); }
 
+a {
+  color: #000;
+  font-size: 14px; }
+
 .home .swiper {
   height: 1.9rem;
   background: #fff; }
@@ -990,10 +994,34 @@ a {
     font-weight: normal;
     color: #7c7c7c;
     font-family: arial; }
+  .user-login .weibo {
+    margin-top: 10px;
+    width: 100%;
+    height: 83px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    .user-login .weibo a {
+      display: inline-block;
+      margin-top: 10px;
+      width: 56px;
+      height: 83px; }
+      .user-login .weibo a img {
+        width: 100%;
+        height: 100%; }
+
+.user-forget {
+  margin-top: 20px; }
 
 .user-register {
   width: 100%;
   height: auto; }
+  .user-register h2.blank {
+    width: 100%;
+    height: 30px; }
   .user-register div {
     width: 100%;
     height: 44px;
@@ -1157,6 +1185,9 @@ section {
   .yo-header-c > .affirm > .yo-ico {
     color: #000; }
 
+header.yo-header {
+  font-size: 16px; }
+
 .user-header {
   background: #fff;
   font-weight: normal; }
@@ -1182,7 +1213,8 @@ section {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  align-items: center; }
+  align-items: center;
+  background: url(/img/headBG.jpg); }
   .user-banner .user-box {
     width: 100%;
     height: 116px;
@@ -1200,7 +1232,6 @@ section {
 .user-content {
   background: #ebebeb; }
   .user-content .user-banner {
-    background: #f00;
     width: 100%;
     height: 116px;
     display: -webkit-box;
@@ -1285,6 +1316,10 @@ section {
           width: 100%;
           line-height: 52px;
           font-size: 18px; }
+          .user-content .user-list ul li a img {
+            width: 33px;
+            height: 33px;
+            margin: 0 6px; }
         .user-content .user-list ul li span {
           color: #ebebeb;
           font-weight: bold;

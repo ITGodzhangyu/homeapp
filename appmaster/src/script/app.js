@@ -14,7 +14,7 @@ import Login from "./usercomponent/login.js"
 import Register from "./usercomponent/register.js"
 import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
-
+import EditAddress from "./usercomponent/editAddress.js"
 
 import { store } from './redux/store'
 import {Provider} from 'react-redux'
@@ -44,6 +44,7 @@ ReactDOM.render(
 		<Route path="/register" component={Register}/>
 		<Route path="/newaddress" component={Newaddress}/>
 		<Route path="/forget" component={Forget}/>
+		<Route path="/editaddress" component={EditAddress}/>
 	</Router>
 	</Provider>,
 	document.getElementById("root")

@@ -17,7 +17,19 @@ class Collect extends React.Component{
 		            <p className="title">{this.props.value}</p>
 		            <span className="regret yo-ico" onClick={this.back}>&#xe639;</span>
 	       		 </header>
-	       		 <section></section>
+	       		 <section>
+	       		 	<ul className='my-concern'>
+	       		 		<li className="concern-list">
+	       		 			<div className='goodsimg'>
+	       		 				<img />
+	       		 			</div>
+	       		 			<div className="goodsdetail">
+	       		 				<span className='goodsname'>121313</span>
+	       		 				<span className="goodsprice">13131</span>
+	       		 			</div>
+	       		 		</li>
+	       		 	</ul>
+	       		 </section>
 			</div>
 		)
 	}

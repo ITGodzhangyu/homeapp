@@ -20,7 +20,24 @@ class Address extends React.Component{
 		            <span className="affirm"><Link to='/newaddress'>新建</Link></span>
 		       </header>
 		       <section>
-		       
+		       		<ul className='user-address'>
+		       			<li className='Saveaddress'>
+		       				<div className='addressinfo'>
+		       					<div className='addressDetail'>
+		       						<span className='address_name'>大健康</span>
+		       						<span className='phonenumber'>15733665467</span>
+		       					</div>
+		       					<div className='choosen'>
+		       						<span className="ischoosen">
+		       							<img src="/img/Chosen.png"/>
+		       						</span>
+		       					</div>
+		       				</div>
+		       				<div className='reviseAddress'>
+		       					<a href="#/editaddress"><img src='/img/edit.png'/></a>
+		       				</div>
+		       			</li>
+		       		</ul>
 		       </section>
 	       	</div>	
 		)

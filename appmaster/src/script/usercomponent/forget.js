@@ -24,7 +24,7 @@ class Forget extends React.Component{
 							<div><span className="yo-ico">&#xe615;</span><input type="password" placeholder="请设置密码"/></div>
 							<div><span className="yo-ico">&#xe615;</span><input type="password" placeholder="重复密码"/></div>
 							<p className="tip">如果在120秒内未能收到系统发送的短信,请继续点击获取验证码</p>
-							<button>注册</button>
+							<button>确定</button>
 						</div>
 				</section>
 			</div>	

@@ -31,3 +31,61 @@
         }
     }
 }
+
+
+.user-address{
+    width: 96%;
+    margin-left: 2%;
+    height: auto;
+    li{
+        width: 100%;
+        height:112px;
+        @include border(1px 1px 1px 1px,#dddddd);
+        @include border-radius(10px);
+        background: #fff; 
+        margin: 10px 0;
+        overflow: hidden;
+        .addressinfo{
+            width: 100%;
+            height: 70px;
+            .addressDetail{
+                float: left;
+                width:90% ;
+                height: 60px;
+                padding-top: 10px;
+                padding-left: 8px;
+                .address_name{
+                    display: inline-block;
+                    padding-right: 30px;
+                }
+                .phonenumber{
+                    display: inline-block;
+                }
+            }
+            .choosen{
+                float: right;
+                img{
+                    width: 25px;
+                    height: 25px;
+                    margin: 5px 5px 0 0;
+                }
+            }
+        } 
+        .reviseAddress{
+            width: 100%;
+            height: 42px;
+            background:#DDDDDD;
+            a{
+                float: right;
+                margin-top: 5px;
+                margin-right: 10px;
+                width: 60px;
+                height: 18px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        } 
+    }
+}

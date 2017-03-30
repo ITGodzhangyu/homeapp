@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,6 +74,12 @@ module.exports = window.React;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+module.exports = window.ReactRouter;
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -85,7 +91,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.store = exports.mapDispatchToProps = exports.mapStateToProps = undefined;
 
-var _redux = __webpack_require__(22);
+var _redux = __webpack_require__(23);
 
 function changer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: '榜单 « 电影 « 豆瓣' };
@@ -124,22 +130,16 @@ exports.store = store;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "store.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = window.ReactRedux;
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = window.ReactDOM;
-
-/***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = window.ReactRouter;
+module.exports = window.ReactDOM;
 
 /***/ }),
 /* 5 */
@@ -173,7 +173,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactDOM = __webpack_require__(3);
+var ReactDOM = __webpack_require__(4);
 
 var Cart = function (_React$Component) {
 	_inherits(Cart, _React$Component);
@@ -237,7 +237,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactDOM = __webpack_require__(3);
+var ReactDOM = __webpack_require__(4);
 
 var Home = function (_React$Component) {
 	_inherits(Home, _React$Component);
@@ -324,7 +324,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactDOM = __webpack_require__(3);
+var ReactDOM = __webpack_require__(4);
 
 var Kind = function (_React$Component) {
 	_inherits(Kind, _React$Component);
@@ -388,7 +388,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactDOM = __webpack_require__(3);
+var ReactDOM = __webpack_require__(4);
 
 var Service = function (_React$Component) {
 	_inherits(Service, _React$Component);
@@ -444,7 +444,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(4);
+var _reactRouter = __webpack_require__(1);
 
 var _address = __webpack_require__(11);
 
@@ -486,7 +486,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactDOM = __webpack_require__(3);
+var ReactDOM = __webpack_require__(4);
 
 var User = function (_React$Component) {
 	_inherits(User, _React$Component);
@@ -511,11 +511,7 @@ var User = function (_React$Component) {
 				_react2.default.createElement(
 					"div",
 					{ className: "user-banner" },
-					_react2.default.createElement(
-						"div",
-						{ className: "user-box" },
-						this.state.arr
-					)
+					this.state.arr
 				),
 				_react2.default.createElement(
 					"div",
@@ -529,6 +525,7 @@ var User = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/myorder" },
+								_react2.default.createElement("img", { src: "/img/myOrder.png" }),
 								"\u6211\u7684\u8BA2\u5355",
 								_react2.default.createElement(
 									"span",
@@ -543,6 +540,7 @@ var User = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/history" },
+								_react2.default.createElement("img", { src: "/img/myHistoryOrder.png" }),
 								"\u5386\u53F2\u8BA2\u5355",
 								_react2.default.createElement(
 									"span",
@@ -557,6 +555,7 @@ var User = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/collect" },
+								_react2.default.createElement("img", { src: "/img/myConcern.png" }),
 								"\u6211\u7684\u6536\u85CF",
 								_react2.default.createElement(
 									"span",
@@ -571,6 +570,7 @@ var User = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/address" },
+								_react2.default.createElement("img", { src: "/img/myAddress.png" }),
 								"\u6211\u7684\u5730\u5740",
 								_react2.default.createElement(
 									"span",
@@ -585,6 +585,7 @@ var User = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/account" },
+								_react2.default.createElement("img", { src: "/img/myAccount.png" }),
 								"\u6211\u7684\u8D26\u6237",
 								_react2.default.createElement(
 									"span",
@@ -599,6 +600,7 @@ var User = function (_React$Component) {
 							_react2.default.createElement(
 								_reactRouter.Link,
 								{ to: "/help" },
+								_react2.default.createElement("img", { src: "/img/helpCenter.png" }),
 								"\u5E2E\u52A9\u4E2D\u5FC3",
 								_react2.default.createElement(
 									"span",
@@ -619,7 +621,7 @@ var User = function (_React$Component) {
 				var username = localStorage.getItem("userID");
 				_arr.push(_react2.default.createElement(
 					"div",
-					null,
+					{ className: "user-box" },
 					_react2.default.createElement(
 						"p",
 						null,
@@ -629,7 +631,7 @@ var User = function (_React$Component) {
 			} else {
 				_arr.push(_react2.default.createElement(
 					"div",
-					null,
+					{ className: "user-box" },
 					_react2.default.createElement(
 						"p",
 						null,
@@ -681,9 +683,11 @@ var _newaddress = __webpack_require__(18);
 
 var _newaddress2 = _interopRequireDefault(_newaddress);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _reactRouter = __webpack_require__(1);
+
+var _store = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -712,30 +716,37 @@ var Address = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				null,
+				{ className: "main" },
 				_react2.default.createElement(
 					"header",
-					null,
+					{ className: "yo-header yo-header-c" },
 					_react2.default.createElement(
-						"div",
-						{ className: "yo-header yo-header-c" },
+						"p",
+						{ className: "title" },
+						this.props.value
+					),
+					_react2.default.createElement(
+						"span",
+						{ className: "regret yo-ico", onClick: this.back },
+						"\uE639"
+					),
+					_react2.default.createElement(
+						"span",
+						{ className: "affirm" },
 						_react2.default.createElement(
-							"h2",
-							{ className: "title" },
-							this.props.value
-						),
-						_react2.default.createElement(
-							"span",
-							{ className: "regret" },
-							_react2.default.createElement(
-								"a",
-								{ href: "#/newaddress" },
-								"\u65B0\u5EFA"
-							)
+							_reactRouter.Link,
+							{ to: "/newaddress" },
+							"\u65B0\u5EFA"
 						)
 					)
-				)
+				),
+				_react2.default.createElement("section", null)
 			);
+		}
+	}, {
+		key: "back",
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
 		}
 	}, {
 		key: "componentDidMount",
@@ -773,9 +784,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -815,12 +828,17 @@ var Collect = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'span',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
 					)
 				),
 				_react2.default.createElement('section', null)
 			);
+		}
+	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
 		}
 	}, {
 		key: 'componentDidMount',
@@ -858,9 +876,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -900,7 +920,7 @@ var Help = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'span',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
 					)
 				),
@@ -975,9 +995,14 @@ var Help = function (_React$Component) {
 			);
 		}
 	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
+		}
+	}, {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
-			var title = '我的收藏';
+			var title = '帮助中心';
 			this.props.onChange({
 				type: 'SETTITLE',
 				title: title
@@ -1010,9 +1035,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1052,12 +1079,17 @@ var Historyorder = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'span',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
 					)
 				),
 				_react2.default.createElement('section', null)
 			);
+		}
+	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
 		}
 	}, {
 		key: 'componentDidMount',
@@ -1095,9 +1127,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1151,20 +1185,89 @@ var Login = function (_React$Component) {
 					_react2.default.createElement(
 						'p',
 						{ className: 'title' },
-						'\u6211\u7684\u8BA2\u5355'
+						this.props.value
 					),
 					_react2.default.createElement(
 						'a',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
 					)
 				),
 				_react2.default.createElement(
 					'section',
 					null,
-					'123'
+					_react2.default.createElement(
+						'div',
+						{ className: 'user-login' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'login-username' },
+							_react2.default.createElement(
+								'span',
+								{ className: 'user yo-ico' },
+								'\uE61B'
+							),
+							_react2.default.createElement('input', { ref: 'username', type: 'text', placeholder: '\u8BF7\u8F93\u5165\u624B\u673A\u53F7/\u90AE\u7BB1' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'login-password' },
+							_react2.default.createElement(
+								'span',
+								{ className: 'yo-ico' },
+								'\uE615'
+							),
+							_react2.default.createElement('input', { ref: 'password', type: 'password', placeholder: '\u8BF7\u8F93\u5165\u5BC6\u7801' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'tab' },
+							_react2.default.createElement(
+								'span',
+								{ className: 'toRegister' },
+								_react2.default.createElement(
+									'a',
+									{ href: '#/register' },
+									'\u7ACB\u5373\u6CE8\u518C'
+								)
+							),
+							_react2.default.createElement(
+								'button',
+								{ onClick: this.login },
+								'\u767B\u9646'
+							)
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							_react2.default.createElement(
+								'a',
+								{ href: '#/forget' },
+								'\u5FD8\u8BB0\u5BC6\u7801'
+							)
+						),
+						_react2.default.createElement(
+							'h5',
+							null,
+							'\u7B2C\u4E09\u65B9\u767B\u9646\u8D26\u53F7\u5FEB\u901F\u767B\u9646'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'weibo' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#' },
+								_react2.default.createElement('img', { src: 'sina_1.jpg' })
+							)
+						)
+					)
 				)
 			);
+		}
+	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
 		}
 	}, {
 		key: 'componentDidMount',
@@ -1181,17 +1284,6 @@ var Login = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = (0, _reactRedux.connect)(_store.mapStateToProps, _store.mapDispatchToProps)(Login);
-
-//<div className='user-login'>
-//						<div className='login-username'><span className='user ifont'>&#xe61b;</span><input 	ref="username" type="text" placeholder='请输入手机号/邮箱'/></div>
-//						<div className='login-password'><span className="ifont">&#xe615;</span><input ref="password" type="password" placeholder='请输入密码'/></div>
-//						<div className='tab'><span className="toRegister"><a href='#/register'>立即注册</a></span><button onClick={this.login}>登陆</button></div>
-//						<p><a href="#">忘记密码</a></p>
-//						<h5>第三方登陆账号快速登陆</h5>
-//						<div className="weibo">
-//							<a href="#"><img /></a>
-//						</div>
-//					</div>
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "login.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
@@ -1213,9 +1305,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1255,12 +1349,17 @@ var Account = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'span',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
 					)
 				),
 				_react2.default.createElement('section', null)
 			);
+		}
+	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
 		}
 	}, {
 		key: 'componentDidMount',
@@ -1298,9 +1397,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1336,11 +1437,11 @@ var Myorder = function (_React$Component) {
 					_react2.default.createElement(
 						'p',
 						{ className: 'title' },
-						'\u6211\u7684\u8BA2\u5355'
+						this.props.value
 					),
 					_react2.default.createElement(
 						'a',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
 					)
 				),
@@ -1350,6 +1451,11 @@ var Myorder = function (_React$Component) {
 					'123'
 				)
 			);
+		}
+	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
 		}
 	}, {
 		key: 'componentDidMount',
@@ -1387,9 +1493,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(1);
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1425,12 +1533,21 @@ var Newaddress = function (_React$Component) {
 					_react2.default.createElement(
 						'p',
 						{ className: 'title' },
-						'\u6211\u7684\u8BA2\u5355'
+						this.props.value
 					),
 					_react2.default.createElement(
 						'a',
-						{ className: 'regret yo-ico' },
+						{ className: 'regret yo-ico', onClick: this.back },
 						'\uE639'
+					),
+					_react2.default.createElement(
+						'span',
+						{ className: 'affirm' },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: '/address' },
+							'\u4FDD\u5B58'
+						)
 					)
 				),
 				_react2.default.createElement(
@@ -1500,6 +1617,11 @@ var Newaddress = function (_React$Component) {
 			);
 		}
 	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
+		}
+	}, {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
 			var title = '新建地址';
@@ -1523,7 +1645,7 @@ exports.default = (0, _reactRedux.connect)(_store.mapStateToProps, _store.mapDis
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -1534,6 +1656,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1558,108 +1686,108 @@ var Register = function (_React$Component) {
 	}
 
 	_createClass(Register, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
-				"div",
-				{ className: "main" },
+				'div',
+				{ className: 'main' },
 				_react2.default.createElement(
-					"header",
-					{ className: "yo-header yo-header-c" },
+					'header',
+					{ className: 'yo-header yo-header-c' },
 					_react2.default.createElement(
-						"p",
-						{ className: "title" },
-						"\u6211\u7684\u8BA2\u5355"
+						'p',
+						{ className: 'title' },
+						this.props.value
 					),
 					_react2.default.createElement(
-						"a",
-						{ className: "regret yo-ico" },
-						"\uE639"
+						'a',
+						{ className: 'regret yo-ico', onClick: this.back },
+						'\uE639'
 					)
 				),
 				_react2.default.createElement(
-					"section",
+					'section',
 					null,
 					_react2.default.createElement(
-						"div",
-						{ className: "user-register" },
+						'div',
+						{ className: 'user-register' },
 						_react2.default.createElement(
-							"div",
+							'div',
 							null,
 							_react2.default.createElement(
-								"span",
-								{ className: "yo-ico" },
-								"\uE61B"
+								'span',
+								{ className: 'yo-ico' },
+								'\uE61B'
 							),
-							_react2.default.createElement("input", { type: "text", placeholder: "\u8BF7\u8F93\u5165\u624B\u673A\u53F7" }),
+							_react2.default.createElement('input', { type: 'text', placeholder: '\u8BF7\u8F93\u5165\u624B\u673A\u53F7' }),
 							_react2.default.createElement(
-								"button",
+								'button',
 								null,
-								"\u83B7\u53D6\u9A8C\u8BC1\u7801"
+								'\u83B7\u53D6\u9A8C\u8BC1\u7801'
 							)
 						),
 						_react2.default.createElement(
-							"div",
+							'div',
 							null,
 							_react2.default.createElement(
-								"span",
-								{ className: "yo-ico" },
-								"\uE621"
+								'span',
+								{ className: 'yo-ico' },
+								'\uE621'
 							),
-							_react2.default.createElement("input", { type: "text", placeholder: "\u8BF7\u8F93\u5165\u60A8\u6536\u5230\u7684\u9A8C\u8BC1\u7801" })
+							_react2.default.createElement('input', { type: 'text', placeholder: '\u8BF7\u8F93\u5165\u60A8\u6536\u5230\u7684\u9A8C\u8BC1\u7801' })
 						),
 						_react2.default.createElement(
-							"div",
+							'div',
 							null,
 							_react2.default.createElement(
-								"span",
-								{ className: "yo-ico" },
-								"\uE615"
+								'span',
+								{ className: 'yo-ico' },
+								'\uE615'
 							),
-							_react2.default.createElement("input", { type: "password", placeholder: "\u8BF7\u8BBE\u7F6E\u5BC6\u7801" })
+							_react2.default.createElement('input', { type: 'password', placeholder: '\u8BF7\u8BBE\u7F6E\u5BC6\u7801' })
 						),
 						_react2.default.createElement(
-							"div",
+							'div',
 							null,
 							_react2.default.createElement(
-								"span",
-								{ className: "yo-ico" },
-								"\uE615"
+								'span',
+								{ className: 'yo-ico' },
+								'\uE615'
 							),
-							_react2.default.createElement("input", { type: "password", placeholder: "\u91CD\u590D\u5BC6\u7801" })
+							_react2.default.createElement('input', { type: 'password', placeholder: '\u91CD\u590D\u5BC6\u7801' })
 						),
 						_react2.default.createElement(
-							"div",
+							'div',
 							null,
-							_react2.default.createElement("input", { type: "text", placeholder: "\u5982\u6709\u793C\u5238\u8BF7\u5728\u6B64\u8F93\u5165" })
+							_react2.default.createElement('input', { type: 'text', placeholder: '\u5982\u6709\u793C\u5238\u8BF7\u5728\u6B64\u8F93\u5165' })
 						),
 						_react2.default.createElement(
-							"p",
+							'p',
 							null,
-							"\u4EE5\u6D3B\u52A8\u5956\u52B1\u7B49\u65B9\u5F0F\u83B7\u5F97\u7684\u7535\u5B50\u793C\u5238\u7684\u4EE3\u7801"
+							'\u4EE5\u6D3B\u52A8\u5956\u52B1\u7B49\u65B9\u5F0F\u83B7\u5F97\u7684\u7535\u5B50\u793C\u5238\u7684\u4EE3\u7801'
 						),
 						_react2.default.createElement(
-							"p",
-							{ className: "tip" },
-							"\u5982\u679C\u5728120\u79D2\u5185\u672A\u80FD\u6536\u5230\u7CFB\u7EDF\u53D1\u9001\u7684\u77ED\u4FE1,\u8BF7\u7EE7\u7EED\u70B9\u51FB\u83B7\u53D6\u9A8C\u8BC1\u7801"
+							'p',
+							{ className: 'tip' },
+							'\u5982\u679C\u5728120\u79D2\u5185\u672A\u80FD\u6536\u5230\u7CFB\u7EDF\u53D1\u9001\u7684\u77ED\u4FE1,\u8BF7\u7EE7\u7EED\u70B9\u51FB\u83B7\u53D6\u9A8C\u8BC1\u7801'
 						),
 						_react2.default.createElement(
-							"button",
+							'button',
 							null,
-							"\u6CE8\u518C"
+							'\u6CE8\u518C'
 						),
 						_react2.default.createElement(
-							"h4",
+							'h4',
 							null,
 							_react2.default.createElement(
-								"span",
+								'span',
 								null,
-								"\u5DF2\u9605\u8BFB\u5E76\u540C\u610F"
+								'\u5DF2\u9605\u8BFB\u5E76\u540C\u610F'
 							),
 							_react2.default.createElement(
-								"a",
-								{ href: "#" },
-								"6688\u4EA4\u6613\u6761\u6B3E"
+								'a',
+								{ href: '#' },
+								'6688\u4EA4\u6613\u6761\u6B3E'
 							)
 						)
 					)
@@ -1667,7 +1795,12 @@ var Register = function (_React$Component) {
 			);
 		}
 	}, {
-		key: "componentDidMount",
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
+		}
+	}, {
+		key: 'componentDidMount',
 		value: function componentDidMount() {
 			var title = '注册';
 			this.props.onChange({
@@ -1680,7 +1813,7 @@ var Register = function (_React$Component) {
 	return Register;
 }(_react2.default.Component);
 
-exports.default = connect(mapStateToProps, mapDispatchToProps)(Register);
+exports.default = (0, _reactRedux.connect)(_store.mapStateToProps, _store.mapDispatchToProps)(Register);
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "register.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
@@ -1702,7 +1835,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(3);
+var _reactDom = __webpack_require__(4);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1726,7 +1859,7 @@ var _service = __webpack_require__(9);
 
 var _service2 = _interopRequireDefault(_service);
 
-var _reactRouter = __webpack_require__(4);
+var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1889,6 +2022,161 @@ exports.default = Footer;
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _store = __webpack_require__(2);
+
+var _reactRouter = __webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Forget = function (_React$Component) {
+	_inherits(Forget, _React$Component);
+
+	function Forget(props) {
+		_classCallCheck(this, Forget);
+
+		var _this = _possibleConstructorReturn(this, (Forget.__proto__ || Object.getPrototypeOf(Forget)).call(this, props));
+
+		_this.state = {
+			title: "购物车"
+		};
+		return _this;
+	}
+
+	_createClass(Forget, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'main' },
+				_react2.default.createElement(
+					'header',
+					{ className: 'yo-header yo-header-c' },
+					_react2.default.createElement(
+						'p',
+						{ className: 'title' },
+						this.props.value
+					),
+					_react2.default.createElement(
+						'a',
+						{ className: 'regret yo-ico', onClick: this.back },
+						'\uE639'
+					)
+				),
+				_react2.default.createElement(
+					'section',
+					null,
+					_react2.default.createElement(
+						'div',
+						{ className: 'user-register user-forget' },
+						_react2.default.createElement(
+							'div',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'yo-ico' },
+								'\uE61B'
+							),
+							_react2.default.createElement('input', { type: 'text', placeholder: '\u8BF7\u8F93\u5165\u624B\u673A\u53F7' }),
+							_react2.default.createElement(
+								'button',
+								null,
+								'\u83B7\u53D6\u9A8C\u8BC1\u7801'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'yo-ico' },
+								'\uE621'
+							),
+							_react2.default.createElement('input', { type: 'text', placeholder: '\u8BF7\u8F93\u5165\u60A8\u6536\u5230\u7684\u9A8C\u8BC1\u7801' })
+						),
+						_react2.default.createElement('h2', { className: 'blank' }),
+						_react2.default.createElement(
+							'div',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'yo-ico' },
+								'\uE615'
+							),
+							_react2.default.createElement('input', { type: 'password', placeholder: '\u8BF7\u8BBE\u7F6E\u5BC6\u7801' })
+						),
+						_react2.default.createElement(
+							'div',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'yo-ico' },
+								'\uE615'
+							),
+							_react2.default.createElement('input', { type: 'password', placeholder: '\u91CD\u590D\u5BC6\u7801' })
+						),
+						_react2.default.createElement(
+							'p',
+							{ className: 'tip' },
+							'\u5982\u679C\u5728120\u79D2\u5185\u672A\u80FD\u6536\u5230\u7CFB\u7EDF\u53D1\u9001\u7684\u77ED\u4FE1,\u8BF7\u7EE7\u7EED\u70B9\u51FB\u83B7\u53D6\u9A8C\u8BC1\u7801'
+						),
+						_react2.default.createElement(
+							'button',
+							null,
+							'\u6CE8\u518C'
+						)
+					)
+				)
+			);
+		}
+	}, {
+		key: 'back',
+		value: function back() {
+			_reactRouter.browserHistory.goBack();
+		}
+	}, {
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var title = '找回密码';
+			this.props.onChange({
+				type: 'SETTITLE',
+				title: title
+			});
+		}
+	}]);
+
+	return Forget;
+}(_react2.default.Component);
+
+exports.default = (0, _reactRedux.connect)(_store.mapStateToProps, _store.mapDispatchToProps)(Forget);
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "forget.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 "use strict";
 
 var _home = __webpack_require__(7);
@@ -1947,19 +2235,23 @@ var _newaddress = __webpack_require__(18);
 
 var _newaddress2 = _interopRequireDefault(_newaddress);
 
-var _store = __webpack_require__(1);
+var _forget = __webpack_require__(21);
 
-var _reactRedux = __webpack_require__(2);
+var _forget2 = _interopRequireDefault(_forget);
+
+var _store = __webpack_require__(2);
+
+var _reactRedux = __webpack_require__(3);
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(3);
+var _reactDom = __webpack_require__(4);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(4);
+var _reactRouter = __webpack_require__(1);
 
 var _index = __webpack_require__(20);
 
@@ -1995,14 +2287,15 @@ _reactDom2.default.render(_react2.default.createElement(
 		_react2.default.createElement(_reactRouter.Route, { path: "/address", component: _address2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: "/login", component: _login2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: "/register", component: _register2.default }),
-		_react2.default.createElement(_reactRouter.Route, { path: "/newaddress", component: _newaddress2.default })
+		_react2.default.createElement(_reactRouter.Route, { path: "/newaddress", component: _newaddress2.default }),
+		_react2.default.createElement(_reactRouter.Route, { path: "/forget", component: _forget2.default })
 	)
 ), document.getElementById("root"));
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\Users\\Administrator\\Desktop\\workSpace1\\homeapp\\appmaster\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "app.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = window.Redux;
