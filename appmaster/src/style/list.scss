@@ -25,7 +25,7 @@
             i{
                 font-size:0.26rem;
                 color:#000;
-                line-height:0.2rem;
+                line-height:0.26rem;
                 margin-left:0.09rem;
             }
         }
@@ -53,27 +53,34 @@
            @include flex-wrap(wrap);
            @include align-content(center);
             li{
-                width:1.60rem;
-                height:2rem;
+                width:1.6rem;
+                height:2.6rem;
                 display:block;
                 border:1px solid #ccc;
                 border-left:none;
                 margin-bottom:-1px;
                 margin-right:-1px;
+                p{
+                    height:0.5rem;
+                    margin:0 0.1rem;
+                }
                 .goodsImg{
-                        width:90%;
-                        height:1.43rem;
-                        margin:5%;
+                        background-image:url("http://m.6688.com/img/newIndex/loading.gif");
+                        @include background-size(100% 100%);
+                        width:1.4rem;
+                        height:1.4rem;
+                        margin:0.1rem;
                         border:100px slide red;
                 }
                 .goodsPrice{
-                    background:#eee;
                     font-size:0.2rem;
                     color:red;
-                    width:90%;
-                    margin:5%;
+                    width:1.4rem;
+                    margin:0.1rem;
                     img{
                         float:right;
+                        width:0.25rem;
+                        height:0.25rem;
                     }
                 }
            }

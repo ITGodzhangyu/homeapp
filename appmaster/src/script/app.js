@@ -34,7 +34,7 @@ ReactDOM.render(
 			<Route path="user" component={User}></Route>
 			<Route path="service" component={Service}></Route>
 		</Route>
-		<Route path="list" component={List}></Route>
+		<Route path="/list/:id" component={List}></Route>
 		<Route path="/myorder" component={Myorder}/>
 		<Route path="/collect" component={Collect}/>
 		<Route path="/account" component={Account}/>

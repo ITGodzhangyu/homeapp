@@ -28,7 +28,6 @@ class Kind extends React.Component{
 		)
 	}
 	data(st){
-		console.log(st);
 		this.setState({
 			str:st
 		})
@@ -46,7 +45,7 @@ class Kind extends React.Component{
 			     let slist=data.map(val=>{
 			       	return (
 			       		<li className="search_list" onClick={this.data.bind(this,val.catalogName) }>
-			       			<Link to="/list" title={val.catalogName}>
+			       			<Link to={`/list/${val.catalogName}`} title={val.catalogName}>
 			       				{val.catalogName}
 			       			</Link>
 			       		</li>
