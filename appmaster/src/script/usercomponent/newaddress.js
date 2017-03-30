@@ -19,7 +19,7 @@ class Newaddress extends React.Component{
 				<span className="affirm"><Link to='/address'>保存</Link></span>
 				</header>
 				<section>
-					123
+					
 				</section>
 			</div>
 		)

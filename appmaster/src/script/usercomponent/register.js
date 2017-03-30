@@ -1,7 +1,7 @@
 import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
-
+import { Link, browserHistory } from 'react-router'
 class Register extends React.Component{
 	constructor(props){
 		super(props)
@@ -14,7 +14,7 @@ class Register extends React.Component{
 			<div className="main">
 				<header className="yo-header yo-header-c">
 					<p className="title">{this.props.value}</p>
-					<a className="regret yo-ico">&#xe639;</a>
+					<a className="regret yo-ico" onClick={this.back}>&#xe639;</a>
 				</header>
 				<section>
 						<div className="user-register">
@@ -32,6 +32,9 @@ class Register extends React.Component{
 			</div>	
 		)
 	}
+	back() {
+   		 browserHistory.goBack()
+  	}
 	componentDidMount() {
 	    let title = '注册'
 	    this.props.onChange({

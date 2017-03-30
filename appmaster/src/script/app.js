@@ -13,7 +13,7 @@ import Collect from "./usercomponent/collect.js"
 import Login from "./usercomponent/login.js"
 import Register from "./usercomponent/register.js"
 import Newaddress from "./usercomponent/newaddress.js"
-
+import Forget from "./usercomponent/forget.js"
 
 
 import { store } from './redux/store'
@@ -43,6 +43,7 @@ ReactDOM.render(
 		<Route path="/login" component={Login}/>
 		<Route path="/register" component={Register}/>
 		<Route path="/newaddress" component={Newaddress}/>
+		<Route path="/forget" component={Forget}/>
 	</Router>
 	</Provider>,
 	document.getElementById("root")

@@ -49,7 +49,7 @@ class Help extends React.Component{
    		 browserHistory.goBack()
   	}
 	componentDidMount() {
-	    let title = '我的收藏'
+	    let title = '帮助中心'
 	    this.props.onChange({
 	      type: 'SETTITLE',
 	      title: title

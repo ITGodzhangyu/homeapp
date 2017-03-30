@@ -29,12 +29,12 @@ class User extends React.Component{
 				</div>
 				<div className="user-list">
 					<ul>
-						<li><Link to="/myorder">我的订单<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link to="/history">历史订单<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link to="/collect">我的收藏<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link to="/address">我的地址<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link to="/account">我的账户<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link to="/help">帮助中心<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/myorder"><img src="/img/myOrder.png"/>我的订单<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/history"><img src="/img/myHistoryOrder.png"/>历史订单<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/collect"><img src="/img/myConcern.png"/>我的收藏<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/address"><img src="/img/myAddress.png"/>我的地址<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/account"><img src="/img/myAccount.png"/>我的账户<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link to="/help"><img src="/img/helpCenter.png"/>帮助中心<span className="yo-ico">&#xe608;</span></Link></li>
 					</ul>
 				</div>
 				
