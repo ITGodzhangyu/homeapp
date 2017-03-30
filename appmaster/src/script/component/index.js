@@ -6,10 +6,13 @@ import Cart from "./cart.js"
 import Search from "./search.js"
 import Service from "./service.js"
 
+import Userheader from "./user-head"
+import { connect } from 'react-redux'
+import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
 //class Index extends React.Component({})
-class Footer extends React.Component{
+class Index extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
@@ -25,7 +28,7 @@ class Footer extends React.Component{
 		return (
 			<div className="main"> 
 					<header>
-						{this.state.title}
+						{this.props.key1}
 					</header>
 					<section>
 						{this.props.children}
@@ -62,5 +65,17 @@ class Footer extends React.Component{
 			</div>
 		);
 	}
+	
+	componentDidMount() {
+		console.log(this.props)
+	    let com = this.props.routes[1].com
+	    this.props.onChange({
+	      type: 'SETCOM',
+	      com: com
+	    })
+	 }
 }
-export default Footer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Index)

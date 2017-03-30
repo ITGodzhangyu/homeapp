@@ -1,9 +1,11 @@
 import { createStore } from 'redux'
 
-function changer(state = {title:'榜单 « 电影 « 豆瓣'}, action) {
+function changer(state = {title:'榜单 « 电影 « 豆瓣',com:[]}, action) {
   switch (action.type) {
     case 'SETTITLE':
       return { title: action.title }
+    case 'SETCOM':
+    	return {com:action.com}
     default:
       return state
   }
@@ -12,7 +14,8 @@ function changer(state = {title:'榜单 « 电影 « 豆瓣'}, action) {
 // 将 Redux state 转化成 组件的 props
 function mapStateToProps(state) {
   return {
-    value: state.title
+    value: state.title,
+    key1:state.com
   }
 }
 

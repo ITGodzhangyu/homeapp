@@ -37,12 +37,12 @@ class Collect extends React.Component{
    		 browserHistory.goBack()
   	}
 	componentDidMount() {
-	    let title = '我的收藏'
+	    let title="我的收藏"
 	    this.props.onChange({
 	      type: 'SETTITLE',
-	      title: title
+	      title:title
 	    })
-	 }
+	}
 }
 export default connect(
   mapStateToProps,

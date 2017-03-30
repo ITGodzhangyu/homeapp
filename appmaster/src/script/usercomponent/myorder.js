@@ -17,8 +17,18 @@ class Myorder extends React.Component{
 				<a className="regret yo-ico" onClick={this.back}>&#xe639;</a>
 				</header>
 				<section>
-					123
-				</section>
+	       		 	<ul className='my-concern'>
+	       		 		<li className="concern-list">
+	       		 			<div className='goodsimg'>
+	       		 				<img />
+	       		 			</div>
+	       		 			<div className="goodsdetail">
+	       		 				<span className='goodsname'>洗衣粉</span>
+	       		 				<span className="goodsprice">13131</span>
+	       		 			</div>
+	       		 		</li>
+	       		 	</ul>
+	       		 </section>
 			</div>
 		)
 	}

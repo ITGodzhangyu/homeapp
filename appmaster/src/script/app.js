@@ -15,6 +15,8 @@ import Register from "./usercomponent/register.js"
 import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
+import Userheader from "./component/user-head"
+
 
 import { store } from './redux/store'
 import {Provider} from 'react-redux'
@@ -31,7 +33,7 @@ ReactDOM.render(
 			<Route path="home" component={Home}></Route>
 			<Route path="cart" component={Cart}></Route>
 			<Route path="search" component={Search}></Route>
-			<Route path="user" component={User}></Route>
+			<Route path="user" com={<Userheader/>} component={User}></Route>
 			<Route path="service" component={Service}></Route>
 		</Route>
 		<Route path="/myorder" component={Myorder}/>
@@ -45,6 +47,7 @@ ReactDOM.render(
 		<Route path="/newaddress" component={Newaddress}/>
 		<Route path="/forget" component={Forget}/>
 		<Route path="/editaddress" component={EditAddress}/>
+		
 	</Router>
 	</Provider>,
 	document.getElementById("root")

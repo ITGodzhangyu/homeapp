@@ -6,7 +6,7 @@ class Register extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			title:"购物车"
+			
 		}
 	}
 	render(){

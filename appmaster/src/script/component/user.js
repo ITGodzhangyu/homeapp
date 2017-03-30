@@ -9,7 +9,7 @@ import Myorder from "../usercomponent/myorder"
 import Collect from "../usercomponent/collect"
 import Login from "../usercomponent/login"
 import Register from "../usercomponent/register"
-
+import Userheader from "./user-head"
 
 var ReactDOM=require("react-dom");
 class User extends React.Component{
@@ -20,7 +20,7 @@ class User extends React.Component{
 		}
 	}
 	render(){
-		return(
+		return(	
 			<div className="user-content">
 				<div className="user-banner">
 					
