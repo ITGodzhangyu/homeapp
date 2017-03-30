@@ -22,7 +22,7 @@ class Register extends React.Component{
 						<div><span className="yo-ico">&#xe621;</span><input type="text" placeholder="请输入您收到的验证码"/></div>
 						<div><span className="yo-ico">&#xe615;</span><input type="password" placeholder="请设置密码"/></div>
 						<div><span className="yo-ico">&#xe615;</span><input type="password" placeholder="重复密码"/></div>
-						<div><input type="text" placeholder="如有礼券请在此输入"/></div>
+						<div><input className='gift' type="text" placeholder="如有礼券请在此输入"/></div>
 						<p>以活动奖励等方式获得的电子礼券的代码</p>
 						<p className="tip">如果在120秒内未能收到系统发送的短信,请继续点击获取验证码</p>
 						<button>注册</button>
