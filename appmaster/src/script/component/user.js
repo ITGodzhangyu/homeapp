@@ -23,9 +23,8 @@ class User extends React.Component{
 		return(
 			<div className="user-content">
 				<div className="user-banner">
-					<div className="user-box">
+					
 						{this.state.arr}
-					</div>
 				</div>
 				<div className="user-list">
 					<ul>
@@ -45,9 +44,9 @@ class User extends React.Component{
 		var _arr=[];
 		if(localStorage.getItem("userID")){
 			var username=localStorage.getItem("userID");
-			_arr.push(<div><p>{username}</p></div>)
+			_arr.push(<div className='user-box'><p>{username}</p></div>)
 		}else{
-			_arr.push(<div><p>欢迎来到6688</p><div className="box"><Link to="/login">登陆 / 注册</Link></div></div>)
+			_arr.push(<div className='user-box'><p>欢迎来到6688</p><div className="box"><Link to="/login">登陆 / 注册</Link></div></div>)
 		}
 		this.setState({
 			arr:_arr
