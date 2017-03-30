@@ -1,5 +1,18 @@
 .home{
     background:#fff;
+    .home_up{
+        position:fixed;
+        bottom:0.6rem;
+        right:0.05rem;
+        z-index:1000;
+        display:none;
+        img{
+            width:0.4rem;
+        }
+    }
+    .home_down{
+        display:none;
+    }
     .home_swiper{
         height:1.37rem;
         background:#fff;
@@ -17,19 +30,6 @@
         }
         
     }
-    .home_main{
-        ul{
-            margin:.2rem;
-            li{
-                .homelist{
-                    margin:.1rem 0;
-                    height:1rem;
-                    background:#fff;
-                }
-            }
-        }
-    }
-    
     .home_promotion{
         @include flexbox();
         @include align-content(center);
@@ -81,15 +81,16 @@
            @include flexbox();
            @include flex-wrap(wrap);
            @include align-content(center);
-            @include justify-content(center);
             .home_list{
-                width:1.5rem;
+                width:1.55rem;
                 display:block;
+                height:1.55rem;
                 border:1px solid #dcdcdc;
+                background:#dcdcdc;
                 margin-left:0.03rem;
                 margin-bottom:0.03rem;
                     img{
-                        width:99%;
+                        width:100%;
                         border:100px slide red;
                     }
                 }

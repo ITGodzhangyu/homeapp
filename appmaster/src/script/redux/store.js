@@ -19,5 +19,5 @@ function mapDispatchToProps(dispatch){
 	}
 	
 }
-let store=createStore()
-export default {store,mapDispatchToProps,mapStateToProps}
+let store=createStore(changer)
+export {store,mapDispatchToProps,mapStateToProps}

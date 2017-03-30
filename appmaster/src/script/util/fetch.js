@@ -1,7 +1,8 @@
 let fetchData=(url,callback)=>{
 	fetch(url)
-	    .then(response=>response.text())
+	    .then(response=>response.json())
 	   	.then(res=>{
+	   		console.log(res);
 			callback(res);
 	})
 }

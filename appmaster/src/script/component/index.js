@@ -1,7 +1,9 @@
 import React,{ Component } from "react"
 import ReactDOM from "react-dom"
+import {connect} from 'react-redux'
+import {mapStateToProps,mapDispatchToProps} from '../redux/store'
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
-class Footer extends React.Component{
+class Index extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
@@ -17,11 +19,14 @@ class Footer extends React.Component{
 		return (
 			<div className="main"> 
 				<header>
-					<img className="index-logo" src="http://m.6688.com/img/newIndex/201607/logo.png"/>
-					<div className="index-search">
-						<i className="yo-ico">&#xe502;</i>						
+				{this.props.value}
+					<div className="header">
+						<img className="index-logo" src="http://m.6688.com/img/newIndex/201607/logo.png"/>
+						<div className="index-search">
+							<i className="yo-ico">&#xe502;</i>						
+						</div>
+						<i className="yo-ico">&#xe82e;</i>
 					</div>
-					<i className="yo-ico">&#xe82e;</i>
 				</header>
 					<section >
 							{this.props.children}				
@@ -58,5 +63,20 @@ class Footer extends React.Component{
 			</div>
 		);
 	}
+	componentDidMount(){
+		
+	}
+	componentDidUpdata(){
+		let title=this.props.routes[2].title
+		this.props.onChange({
+			type:'SETTITLE',
+			title:title
+		})
+	}
 }
-export default Footer;
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Index)
+
+//export default Index;

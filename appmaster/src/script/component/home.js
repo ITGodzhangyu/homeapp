@@ -1,6 +1,6 @@
 import React,{ Component } from "react"
 import Carousel from '../../component_dev/carousel/src/'
-import Scroller from '../../component_dev/scroller/src/'
+import List from '../../component_dev/scroller/src/'
 import fetchData from '../util/fetch'
 var ReactDOM=require("react-dom");
 class Home extends React.Component{
@@ -11,13 +11,50 @@ class Home extends React.Component{
 			navlist1:'',
 			navlist2:'',
 			homelist:'',
+			updown:"home_up"
 
 		}
+	}
+	goup(){
+		this.refs.scroller.scrollTo(0, 0, 300);
+	}
+	upshow(evt){
+        var _h=evt.contentOffset.y
+        if(_h>=-160){
+        	document.getElementById("p").style.display="none";
+        }else{
+        	document.getElementById("p").style.display="block";
+        }
 	}
 	render(){
 		return (
 			<div className="home">
-				<Scroller extraClass ="yo-scroller yo-scroller-fullscreen">
+					<div className={this.state.updown} id="p" onClick={this.goup.bind(this)}>
+						<img src="http://m.6688.com/img/newIndex/201607/scroll-to-top-icon.png"/>
+					</div>
+				<List 
+					extraClass ="yo-scroller yo-scroller-fullscreen" 
+					onScroll={this.upshow} 
+					ref="scroller"
+				    usePullRefresh={true}
+				    onRefresh={() => {
+				    	this.setState({
+				    		navlist1:'',
+							navlist2:'',
+							homelist:'',
+							homelist2:''
+				    	});	
+				        this.fetchRefresh('./json/nav.json');
+				        this.fetchLoad('./json/list.json');
+				    	this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
+    				}}
+				    useLoadMore={true}
+				    onLoad={() => {
+				        this.fetchLoad('./json/list.json')
+				        this.refs.scroller.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
+				    }}
+				    
+				>
 				<div className="home_scroll">
 				<div className="home_swiper">
 					<div>
@@ -65,47 +102,53 @@ class Home extends React.Component{
 					<ul>
 						{this.state.navlist2}
 					</ul>
+					
 				</div>
 				</div>
-				</Scroller>
+				</List>
 			</div>
 		)
 	}
-	componentDidMount() {
-    let url = '/api/shop/PageData/Product.ashx?t=0.7169888249561978&actType=GetCatalogNavigation'
-    let url2= '/api/shop/PageData/Product.ashx?t=0.7169888249561978&actType=GetBiBaiGoodsListTop80'
-    fetchData(url,function(res){
-    	 var data=eval(res)
-   		console.log(data)
-        var list1=[],list2=[];
-        for(var i=0;i<16;i++){
-        	if(i<8){
-        		list1.push({img:'http://m.6688.com/img/newIndex/201607/catalogNavigation/'+data[i].catalogName+'.jpg',catalogName:data[i].catalogName});
-        	}else{
-        		list2.push({img:'http://m.6688.com/img/newIndex/201607/catalogNavigation/'+data[i].catalogName+'.jpg',catalogName:data[i].catalogName});
-        	}
-        }
-        let nlist1=list1.map(val=>{
-          return (<li className="item"><img  src={val.img} /></li>)
-        })
-        let nlist2=list2.map(val=>{
-          return (<li className="item"><img src={val.img} /></li>)
-        })
-        this.setState({
-          navlist1: nlist1,
-          navlist2: nlist2
-        })
-    }.bind(this))
-	fetchData(url2,function(res){
+	fetchRefresh(url){
+		fetchData(url,function(res){
+	    	 var data=eval(res)
+	   		console.log(data)
+	        var list1=[],list2=[];
+	        for(var i=0;i<16;i++){
+	        	if(i<8){
+	        		list1.push({img:'http://m.6688.com/img/newIndex/201607/catalogNavigation/'+data[i].catalogName+'.jpg',catalogName:data[i].catalogName});
+	        	}else{
+	        		list2.push({img:'http://m.6688.com/img/newIndex/201607/catalogNavigation/'+data[i].catalogName+'.jpg',catalogName:data[i].catalogName});
+	        	}
+	        }
+	        let nlist1=list1.map(val=>{
+	          return (<li className="item"><img  src={val.img} /></li>)
+	        })
+	        let nlist2=list2.map(val=>{
+	          return (<li className="item"><img src={val.img} /></li>)
+	        })
+	        this.setState({
+	          navlist1: nlist1,
+	          navlist2: nlist2
+	        })
+    	}.bind(this))
+	}
+	fetchLoad(url){
+		fetchData(url,function(res){
 		var data=eval(res)
    		console.log(data)
-       let hlist=data.map(val=>{
-       		return (<li className="home_list"><img src={val.goodsImg}/></li>)
-       })
-       this.setState({     
-          homelist: hlist
-        })
-	}.bind(this))
+	       let hlist=data.map(val=>{
+	       		return (<li className="home_list"><List.LazyImage src={val.goodsImg}/></li>)
+	       })
+       		this.setState({
+          		homelist: hlist
+        	})
+		}.bind(this))
+	}
+	componentDidMount(){
+    this.fetchLoad('./json/list.json')
+   	this.fetchRefresh('./json/nav.json')
+   
   }
 }
 export default Home;
