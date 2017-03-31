@@ -1,8 +1,11 @@
-require('../style/app.scss')
+import '../style/app.scss'
+import {Provider} from 'react-redux'
+import { store } from "./redux/store"
 import Home from "./component/home.js"
 import User from "./component/user.js"
 import Cart from "./component/cart.js"
 import Search from "./component/search.js"
+import List from "./component/list.js"
 import Service from "./component/service.js"
 import Address from "./usercomponent/address.js"
 import Help from "./usercomponent/help.js"
@@ -17,19 +20,15 @@ import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
 import Userheader from "./component/user-head"
 
-
-import { store } from './redux/store'
-import {Provider} from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
+import  {Router,Route,IndexRoute,IndexRedirect,Link,hashHistory} from 'react-router'
 import Index from './component/index'
-import '../style/app.scss'
 ReactDOM.render(
 	<Provider store={store}>
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
-			<IndexRoute component={Home}></IndexRoute>
+			<IndexRedirect to="/home"></IndexRedirect>
 			<Route path="home" component={Home}></Route>
 			<Route path="cart" component={Cart}></Route>
 			<Route path="search" component={Search}></Route>
@@ -47,7 +46,7 @@ ReactDOM.render(
 		<Route path="/newaddress" component={Newaddress}/>
 		<Route path="/forget" component={Forget}/>
 		<Route path="/editaddress" component={EditAddress}/>
-		
+		<Route path="/list" component={List}></Route>
 	</Router>
 	</Provider>,
 	document.getElementById("root")

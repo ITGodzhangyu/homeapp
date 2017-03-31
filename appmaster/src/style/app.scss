@@ -4,6 +4,10 @@
 @import './common';
 @import './home';
 @import './user';
+@import './search';
+@import './list';
+
+
 $base-color: blue;
 body {
   background: $base-color;

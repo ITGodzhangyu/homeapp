@@ -1,0 +1,83 @@
+.list{
+    background:#fff;
+    .list_header{
+        height:0.44rem;
+        position:fixed;
+        z-index:1000;
+        @include flexbox();
+        @include align-content(center);
+        @include justify-content(center);
+        .list_search{
+            width:2rem;
+            height:0.26rem;
+            margin:0.09rem 0.1rem 0.09rem 0.1rem;
+            background:#fff;
+            border:1px solid #000;
+            border-radius:0.02rem;
+             @include flexbox();
+             input{
+                 width:1.6rem;
+                 height:100%;
+                 border:none;
+                overflow:none;
+                text-align:center;
+             }
+            i{
+                font-size:0.26rem;
+                color:#000;
+                line-height:0.2rem;
+                margin-left:0.09rem;
+            }
+        }
+        .gohome{
+            width:0.3rem;
+            margin-right:0.2rem;
+            height:0.3rem;
+            margin-top:0.07rem;
+        }
+        span{
+            font-size:0.2rem;
+            line-height:0.44rem;
+        }
+        
+    }
+    .filter_list{ 
+        .yo-scroller{
+            top:0.5rem;
+        }
+        ul{
+            padding:0;
+            margin:0;
+           width:100%;
+           @include flexbox();
+           @include flex-wrap(wrap);
+           @include align-content(center);
+            li{
+                width:1.60rem;
+                height:2rem;
+                display:block;
+                border:1px solid #ccc;
+                border-left:none;
+                margin-bottom:-1px;
+                margin-right:-1px;
+                .goodsImg{
+                        width:90%;
+                        height:1.43rem;
+                        margin:5%;
+                        border:100px slide red;
+                }
+                .goodsPrice{
+                    background:#eee;
+                    font-size:0.2rem;
+                    color:red;
+                    width:90%;
+                    margin:5%;
+                    img{
+                        float:right;
+                    }
+                }
+           }
+    }
+    }
+   
+}

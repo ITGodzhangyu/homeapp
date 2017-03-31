@@ -14,5 +14,6 @@ class Service extends React.Component{
 			</div>
 		)
 	}
+	
 }
 export default Service;

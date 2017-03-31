@@ -32,7 +32,7 @@ class Login extends React.Component{
 				<p className="title">{this.props.value}</p>
 				<a className="regret yo-ico" onClick={this.back}>&#xe639;</a>
 				</header>
-				<section>
+				<section className="user">
 					<div className='user-login'>
 						<div className='login-username'><span className='user yo-ico'>&#xe61b;</span><input 	ref="username" type="text" placeholder='请输入手机号/邮箱'/></div>
 						<div className='login-password'><span className="yo-ico">&#xe615;</span><input ref="password" type="password" placeholder='请输入密码'/></div>

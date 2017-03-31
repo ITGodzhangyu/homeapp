@@ -12,6 +12,8 @@ import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 
 import  {Router,Route,IndexRoute,Link,hashHistory} from 'react-router'
 //class Index extends React.Component({})
+
+
 class Index extends React.Component{
 	constructor(props){
 		super(props)
@@ -31,7 +33,7 @@ class Index extends React.Component{
 						{this.props.key1}
 					</header>
 					<section>
-						{this.props.children}
+						{this.props.children}				
 					</section>
 					<footer>
 						<ul>
@@ -65,9 +67,7 @@ class Index extends React.Component{
 			</div>
 		);
 	}
-	
 	componentDidMount() {
-		console.log(this.props)
 	    let com = this.props.routes[1].com
 	    this.props.onChange({
 	      type: 'SETCOM',
@@ -79,3 +79,6 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Index)
+
+
+

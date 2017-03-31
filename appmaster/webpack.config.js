@@ -9,7 +9,6 @@ module.exports = {
 //     filename: 'app_[hash].js'
     filename: 'app.js'
   },
-
   devServer: {
     contentBase: './build',
     host: 'localhost',
@@ -17,8 +16,9 @@ module.exports = {
     historyApiFallback: false,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
-        pathRewrite: {'^/api': ''}
+        target: 'localhost:3000',
+        pathRewrite: {'^/api': ''},
+        changeOrigin: true
       }
     }
   },
@@ -84,7 +84,7 @@ module.exports = {
     'react': 'window.React',
     'react-dom': 'window.ReactDOM',
     'react-router':'window.ReactRouter',
-    'redux': 'window.Redux',
-    'react-redux': 'window.ReactRedux'
+    'redux':'window.Redux',
+    'react-redux':'window.ReactRedux'
   }
 }

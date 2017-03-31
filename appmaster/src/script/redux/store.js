@@ -1,3 +1,4 @@
+
 import { createStore } from 'redux'
 
 function changer(state = {title:'榜单 « 电影 « 豆瓣',com:[]}, action) {
