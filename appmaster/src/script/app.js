@@ -19,6 +19,8 @@ import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
 import Userheader from "./component/user-head"
+import Setup from "./usercomponent/setup.js"
+
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -45,8 +47,9 @@ ReactDOM.render(
 		<Route path="/register" component={Register}/>
 		<Route path="/newaddress" component={Newaddress}/>
 		<Route path="/forget" component={Forget}/>
-		<Route path="/editaddress" component={EditAddress}/>
+		<Route path="/editaddress/:type" component={EditAddress}/>
 		<Route path="/list" component={List}></Route>
+		<Route path="/setup" component={Setup}></Route>
 	</Router>
 	</Provider>,
 	document.getElementById("root")

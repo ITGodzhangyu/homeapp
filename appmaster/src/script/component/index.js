@@ -67,6 +67,13 @@ class Index extends React.Component{
 			</div>
 		);
 	}
+	componentDidUpdate() {
+	    let com = this.props.routes[1].com
+	    this.props.onChange({
+	      type: 'SETCOM',
+	      com: com
+	    })
+	 }
 	componentDidMount() {
 	    let com = this.props.routes[1].com
 	    this.props.onChange({
@@ -81,4 +88,12 @@ export default connect(
 )(Index)
 
 
+
+//localStorage.setItem("cart",JSON.stringify(this.state.data)+"#");
+//		var cart=localStorage.getItem("cart");
+//		cart+=JSON.stringify(this.state.data)+"#";
+//		localStorage.setItem("cart",cart);
+//		var cart=localStorage.getItem("cart");
+//		var n=cart.split('#')
+//		console.log(JSON.parse(n[0]));
 

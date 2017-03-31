@@ -2,6 +2,7 @@ import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 import { Link, browserHistory } from 'react-router'
+import Toast from "../../component_dev/toast/src"
 class Register extends React.Component{
 	constructor(props){
 		super(props)
@@ -16,25 +17,28 @@ class Register extends React.Component{
 			const password=this.refs.password.value	
 			const repassword=this.refs.repassword.value	
 			if(userID=='' || password==''){
-				alert("请输入完整")
+				Toast.show("请填写完整")
 			}else if (password !==repassword){
-				alert("两次密码输入不一致")
-			}else{
+				Toast.show("两次密码输入不一致")
+			}else if(!(/^1[34578]\d{9}$/).test(userID)){
+					Toast.show("手机号有误")
+			}
+			else{
 				let url='http://datainfo.duapp.com/shopdata/userinfo.php?status=register&userID='+userID+'&password='+password
 				fetch(url).then(response=>response.json()).
 				then(res=>{
 					if(res==1){
-						alert("注册成功")
+						Toast.show("注册成功")
 						window.location.href='#/user';
 					}else if(res==0){
-						alert("用户名重名")
+						Toast.show("用户名重名")
 					}else{
-						alert("注册失败")
+						Toast.show("注册失败")
 					}
 				})
 			}
 		}else{
-			alert("请阅读交易条款")
+			Toast.show("请阅读交易条款")
 		}
 	}
 	

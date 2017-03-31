@@ -2,14 +2,13 @@ import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 import { Link, browserHistory } from 'react-router'
-
+import Toast from "../../component_dev/toast/src"
 class Newaddress extends React.Component{
 	constructor(props){
 		super(props)
 		this.save=this.save.bind(this)
 		this.state={
-			arr:[],
-			list:""
+			data:null
 		}
 	}
 	render(){
@@ -41,20 +40,36 @@ class Newaddress extends React.Component{
 		var code=this.refs.code.value
 		if(name!="" && _area!="" && phone!="" && code!=""){
 			var obj={name:name,_area:_area,phone:phone,code:code}
-			localStorage.setItem("address",JSON.stringify(obj))
+			this.setState({
+				data:obj
+			})
 			window.location.href="#/address"
 		}else{
-			alert("请填写完整")
+			Toast.show("请填写完整")
 		}
-		
 	}
 	componentDidMount() {
 	    let title = '新建地址'
 	    this.props.onChange({
 	      type: 'SETTITLE',
 	      title: title
-	    })
+	    }) 
 	 }
+	componentDidUpdate(){
+		if(localStorage.getItem("address")){
+			var address=localStorage.getItem("address");
+			if(this.state.data!=null){
+				address+=JSON.stringify(this.state.data)+"#";
+				localStorage.setItem("address",address);
+			}	
+		}else{
+			var address=localStorage.getItem("address");
+			if(this.state.data!=null){
+				address=JSON.stringify(this.state.data)+"#";
+				localStorage.setItem("address",address);
+			}	
+		}
+	}
 }
 export default connect(
   mapStateToProps,

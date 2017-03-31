@@ -11,7 +11,7 @@ class Userheader extends React.Component{
 		return (
 			<header className="yo-header yo-header-c">
 				<p className="title">我的</p>
-				<span className="affirm"><Link to='/address' className='yo-ico'>&#xe62a;</Link></span>
+				<span className="affirm"><Link to='/setup' className='yo-ico'>&#xe62a;</Link></span>
 			</header>
 		)
 	}

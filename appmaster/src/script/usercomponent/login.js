@@ -2,7 +2,7 @@ import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 import { Link, browserHistory } from 'react-router'
-
+import Toast from "../../component_dev/toast/src"
 class Login extends React.Component{
 	constructor(props){
 		super(props)
@@ -12,18 +12,21 @@ class Login extends React.Component{
 		const userID=this.refs.username.value
 		const password=this.refs.password.value	
 		if(userID=='' || password==''){
-			alert("用户名或密码错误")
+			Toast.show("用户名或密码错误")
+		}else{
+				let url='http://datainfo.duapp.com/shopdata/userinfo.php?status=login&userID='+userID+'&password='+password
+				fetch(url).then(response=>response.json()).
+				then(res=>{
+					if(res instanceof Object){
+						Toast.show("登陆成功")
+						window.location.href='#/user';
+						localStorage.setItem("userID",userID)
+					}else{
+						Toast.show("用户名或密码错误")
+					}
+				})
 		}
-		let url='http://datainfo.duapp.com/shopdata/userinfo.php?status=login&userID='+userID+'&password='+password
-		fetch(url).then(response=>response.json()).
-		then(res=>{
-			if(res instanceof Object){
-				window.location.href='#/user';
-				localStorage.setItem("userID",userID)
-			}else{
-				alert("用户名或密码错误")
-			}
-		})
+		
 	}
 	render(){
 		return (
