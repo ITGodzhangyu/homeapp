@@ -32,9 +32,9 @@ class Login extends React.Component{
 				<p className="title">{this.props.value}</p>
 				<a className="regret yo-ico" onClick={this.back}>&#xe639;</a>
 				</header>
-				<section>
+				<div className="login_section">
 					<div className='user-login'>
-						<div className='login-username'><span className='user yo-ico'>&#xe61b;</span><input 	ref="username" type="text" placeholder='请输入手机号/邮箱'/></div>
+						<div className='login-username'><span className='user yo-ico'>&#xe61b;</span><input ref="username" type="text" placeholder='请输入手机号/邮箱'/></div>
 						<div className='login-password'><span className="yo-ico">&#xe615;</span><input ref="password" type="password" placeholder='请输入密码'/></div>
 						<div className='tab'><span className="toRegister"><a href='#/register'>立即注册</a></span><button onClick={this.login}>登陆</button></div>
 						<p><a href="#/forget">忘记密码</a></p>
@@ -43,7 +43,7 @@ class Login extends React.Component{
 							<a href="#"><img src="/img/sina_1.jpg"/></a>
 						</div>
 					</div>
-				</section>
+				</div>
 			</div>
 		)
 	}

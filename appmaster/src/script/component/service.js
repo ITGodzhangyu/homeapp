@@ -25,7 +25,7 @@ class Service extends React.Component{
 						<label>姓名</label>
 						<input type="text" onChange={this.valChange.bind(this,"name")} placeholder="(必填)"/>
 						<label>手机号码</label>
-						<input type="text" onChange={this.valChange.bind(this,"phone")} placeholder="(必填)"/>
+						<input type="tel" onChange={this.valChange.bind(this,"phone")} placeholder="(必填)"/>
 						<label>电子邮件</label>
 						<input type="email" autocomplete="off"/>
 						<label>订单号</label>

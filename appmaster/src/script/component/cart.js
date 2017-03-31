@@ -7,7 +7,9 @@ class Cart extends React.Component{
 		this.state={
 			title:"购物车",
 			have:true,
-			num:0.00
+			num:0.00,
+			shalist:[],
+			datalist:[]
 		}
 	}
 	render(){
@@ -20,7 +22,7 @@ class Cart extends React.Component{
 						</div>
 					</Link>
 					<h2>购物车</h2>
-					<span>删除</span>
+					<span onClick={this.delate.bind(this)}>删除</span>
 					<p>每单满300就95折,您还差230.1元就可以享受啦</p>
 				</div>
 				<ul className="cart_main">
@@ -30,11 +32,11 @@ class Cart extends React.Component{
 		)
 	}
 	componentDidMount(){
+		this.comeon()
+	}
+	comeon(){
 		var clist=[];
 		var cart=localStorage.getItem("cart");
-	//	cart+=JSON.stringify(this.state.data)+"#";
-	//	localStorage.setItem("cart",cart);
-	//	var cart=localStorage.getItem("cart");
 		var data=cart.split('#')
 		for(var i=0,len=data.length;i<len-1;i++){
 			var val=JSON.parse(data[i]);
@@ -43,9 +45,8 @@ class Cart extends React.Component{
 					<div className="list_header"></div>
 					<div className="cart_list">
 						<div className="cart_gou">
-							<div onClick={this.change.bind(this)}></div>
+							<div onClick={this.change.bind(this,val.Sn)}></div>
 						</div>
-						
 						<img src={val.goodsImg}/>
 						<div className="cart_menu">
 							<p>{val.Caption}</p>
@@ -54,7 +55,7 @@ class Cart extends React.Component{
 								<span>数量 : </span>
 								<input type="number" min="1" onChange={this.numadd.bind(this,val.Price)}/>
 							</div>
-							<i>小计:<span>￥{val.Price}</span></i>
+							<i>小计:<span>￥{this.state.num}</span></i>
 						</div>
 					</div>
 					
@@ -65,6 +66,31 @@ class Cart extends React.Component{
 			datalist:clist
 		})
 	}
+	componentWillUnmount(){
+	}
+	delate(){
+		var slist=this.state.shalist;
+		var cart=localStorage.getItem("cart");
+		console.log(cart);
+		var data=cart.split('#');
+		var newlist=[];
+		for(var i=0,len=data.length;i<len-1;i++){	
+			var val=JSON.parse(data[i]);
+			for(var n=0,lok=slist.length;n<lok;n++){
+				if(val.Sn!==slist[n]){
+					newlist.push(data[i]+"#");
+				}
+				
+			}
+		}
+		newlist.push("");
+		for(var i=0,len=cart.length;i<len;i++){
+			cart=String(newlist).replace("#,","#")
+		}
+		localStorage.setItem("cart",cart);
+		console.log(cart)
+		this.comeon();
+	}
 	numadd(price,evt){
 		var n=evt.target.value;
 		var price=parseInt(price)*n;
@@ -72,19 +98,27 @@ class Cart extends React.Component{
 		this.setState({
 			num:price
 		})
+		this.comeon();
 	}
-	change(evt){
+	change(Sn,evt){
 		var have=this.state.have;
+		var slist=this.state.shalist;
 		if(have){
 			evt.target.style.backgroundImage="url('http://m.6688.com/shop/MobileUI/img/Chosen.png')";
 			evt.target.style.backgroundSize="100% 100%";
+			slist.push(Sn)
 		}else{
 			evt.target.style.backgroundImage="none";
+			slist.map((item,index)=>{
+				if(item===Sn){
+					slist.splice(index,1);
+				}
+			})
 		}
 		this.setState({
-			have:!have
+			have:!have,
+			shalist:slist
 		})
-		console.log(this.state.have)
 	}
 }
 export default Cart;
