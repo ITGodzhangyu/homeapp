@@ -1,0 +1,100 @@
+.cart{
+    height:100%;
+   width:100%;
+    background:#ebebeb;
+    .cart_header{
+        height:0.65rem;
+        position:relative;
+        background:#fff;
+        .cart_gohome{
+            position:absolute;
+            top:0.03rem;
+            width:0.3rem;
+            height:0.3rem;
+            text-align:center;
+            line-height:0.28rem;
+            border-radius:0.3rem;
+            background:#e7e7e7;
+            .yo-ico{
+                font-size:0.18rem;
+                color:#fff;
+                padding:0.02rem 0.01rem;
+                background:#999;
+                border-radius:0.2rem;
+            }
+        }
+        
+        h2{
+            padding-top:0.05rem;
+            text-align:center;
+            font-size:0.16rem;
+        }
+        span{
+            font-size:.14rem;
+            position:absolute;
+            right:0.15rem;
+            top:0.17rem;
+        }
+        p{
+            width:100%;
+            margin-top:0.1rem;
+            color:#ff0000;
+            font-size:.14rem;
+            text-align:center;
+        }
+    }
+    .cart_main{
+        .list_header{
+            height:0.1rem;
+            border-top:1px solid #e7e7e7;
+            border-bottom:1px solid #e7e7e7;
+            background:#fff;
+            width:100%;
+        }
+        .cart_list{
+            padding-top:0.05rem;
+            @include flexbox();
+            @include align-content(center);
+            @include justify-content(center);
+            font-size:0.1rem;
+            background-color: #f5f2f2;
+            .cart_gou{
+                width:0.3rem;
+                div{
+                    width:0.2rem;
+                    height:0.2rem;
+                    border-radius:100%;
+                    border:1px solid #dcdcdc;
+                    background:#fff;
+                    margin-left:0.05rem;
+                     margin-right:0.03rem;
+                    margin-top:0.3rem;
+                }
+            }
+            img{
+                width:0.7rem;
+                height:0.8rem;
+                margin-right:0.05rem;
+            }
+            .cart_menu{
+                input{
+                    width:0.44rem;
+                    height:0.21rem;
+                }
+                g{
+                    color: Gray;
+                    height: 0.25rem;
+                    line-height:0.25rem;
+                    display:block;
+                }
+                i{
+                    float:right;
+                    span{
+                        color:red;
+                    }
+                }
+            }
+        }
+        
+    }
+}

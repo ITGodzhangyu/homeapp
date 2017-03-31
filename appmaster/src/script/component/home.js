@@ -1,6 +1,7 @@
 import React,{ Component } from "react"
 import Carousel from '../../component_dev/carousel/src/'
 import List from '../../component_dev/scroller/src/'
+import  {Link,hashHistory} from 'react-router'
 import fetchData from '../util/fetch'
 var ReactDOM=require("react-dom");
 class Home extends React.Component{
@@ -10,8 +11,9 @@ class Home extends React.Component{
 			title:"首页",
 			navlist1:'',
 			navlist2:'',
-			homelist:'',
-			updown:"home_up"
+			homelist:[],
+			updown:"home_up",
+			zlen:50
 
 		}
 	}
@@ -41,16 +43,16 @@ class Home extends React.Component{
 				    	this.setState({
 				    		navlist1:'',
 							navlist2:'',
-							homelist:'',
-							homelist2:''
+							zlen:30,
+							homelist:[]
 				    	});	
 				        this.fetchRefresh('./json/nav.json');
-				        this.fetchLoad('./json/list.json');
+				        this.fetchLoad('./json/list.json',this.state.zlen);
 				    	this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
     				}}
 				    useLoadMore={true}
 				    onLoad={() => {
-				        this.fetchLoad('./json/list.json')
+				        this.fetchLoad('./json/list.json',this.state.zlen)
 				        this.refs.scroller.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
 				    }}
 				    
@@ -95,6 +97,9 @@ class Home extends React.Component{
 						<hr/><span>进店必败</span><hr/>
 					</div>
 					<ul>
+						{this.state.homelistf}
+					</ul>
+					<ul>
 						{this.state.homelist}
 					</ul>
 				</div>
@@ -122,10 +127,10 @@ class Home extends React.Component{
 	        	}
 	        }
 	        let nlist1=list1.map(val=>{
-	          return (<li className="item"><img  src={val.img} /></li>)
+	          return (<li className="item"><img  src={val.img}/></li>)
 	        })
 	        let nlist2=list2.map(val=>{
-	          return (<li className="item"><img src={val.img} /></li>)
+	          return (<li className="item"><img src={val.img}/></li>)
 	        })
 	        this.setState({
 	          navlist1: nlist1,
@@ -133,20 +138,37 @@ class Home extends React.Component{
 	        })
     	}.bind(this))
 	}
-	fetchLoad(url){
+	fetchLoad(url,zle){
 		fetchData(url,function(res){
 		var data=eval(res)
-   		console.log(data)
-	       let hlist=data.map(val=>{
-	       		return (<li className="home_list"><List.LazyImage src={val.goodsImg}/></li>)
+			var klen=this.state.homelist.length;
+			var len=data.length;
+			var hlist=[];
+			if(zle<=len){
+				for(var i=klen;i<zle;i++){
+	       			hlist.push(<Link to={`/detail/${data[i].Sn}`}><li className="home_list"><List.LazyImage src={data[i].goodsImg}/></li></Link>);
+	       		}
+			}else if(zle>=len&&(zle-50)<=len){
+				for(var i=klen;i<len;i++){
+	       			hlist.push(<Link to={`/detail/${data[i].Sn}`}><li className="home_list"><List.LazyImage src={data[i].goodsImg}/></li></Link>);
+	       		}
+			}
+	       zle+=30;
+	       var ulist=[];
+	       this.state.homelist.map(val=>{
+	       		ulist.push(val)
+	       })
+	       hlist.map(val=>{
+	       		ulist.push(val)
 	       })
        		this.setState({
-          		homelist: hlist
+          		homelist: ulist,
+          		zlen:zle
         	})
 		}.bind(this))
 	}
 	componentDidMount(){
-    this.fetchLoad('./json/list.json')
+    this.fetchLoad('./json/list.json',this.state.zlen)
    	this.fetchRefresh('./json/nav.json')
    
   }
