@@ -8,10 +8,12 @@ class Address extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			title:"新建地址"
+			arr:[],
+			list:[]
 		}
 	}
 	render(){
+		
 		return (
 			<div className="main">
 				<header className="yo-header yo-header-c">
@@ -21,22 +23,7 @@ class Address extends React.Component{
 		       </header>
 		       <section>
 		       		<ul className='user-address'>
-		       			<li className='Saveaddress'>
-		       				<div className='addressinfo'>
-		       					<div className='addressDetail'>
-		       						<span className='address_name'>大健康</span>
-		       						<span className='phonenumber'>15733665467</span>
-		       					</div>
-		       					<div className='choosen'>
-		       						<span className="ischoosen">
-		       							<img src="/img/Chosen.png"/>
-		       						</span>
-		       					</div>
-		       				</div>
-		       				<div className='reviseAddress'>
-		       					<a href="#/editaddress"><img src='/img/edit.png'/></a>
-		       				</div>
-		       			</li>
+		       			{this.state.list}
 		       		</ul>
 		       </section>
 	       	</div>	
@@ -51,6 +38,36 @@ class Address extends React.Component{
 	      type: 'SETTITLE',
 	      title: title
 	    })
+	    if(window.localStorage){
+	    	var obj=JSON.parse(localStorage.getItem("address"))
+	    	this.setState({
+	    		arr:this.state.arr.push(obj)
+	    	})
+	    	var list=[]
+			this.state.arr.map(function(item){
+			list.push(<li className='Saveaddress'>
+		       				<div className='addressinfo'>
+		       					<div className='addressDetail'>
+		       						<span className='address_name'>{item.name}</span>
+		       						<span className='phonenumber'>{item.phone}</span>
+		       						<div className="local">{item._area}</div>
+		       					</div>
+		       					<div className='choosen'>
+		       						<span className="ischoosen">
+		       							<img src="/img/Chosen.png"/>
+		       						</span>
+		       					</div>
+		       				</div>
+		       				<div className='reviseAddress'>
+		       					<a href="#/editaddress"><img src='/img/edit.png'/></a>
+		       				</div>
+		       			</li>)
+			})
+	    }
+		this.setState({
+	    		list:list
+	    	})
+	    
 	 }
 }
 export default connect(

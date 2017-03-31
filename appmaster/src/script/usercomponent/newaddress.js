@@ -6,8 +6,10 @@ import { Link, browserHistory } from 'react-router'
 class Newaddress extends React.Component{
 	constructor(props){
 		super(props)
+		this.save=this.save.bind(this)
 		this.state={
-			title:"购物车"
+			arr:[],
+			list:""
 		}
 	}
 	render(){
@@ -16,10 +18,15 @@ class Newaddress extends React.Component{
 				<header className="yo-header yo-header-c">
 				<p className="title">{this.props.value}</p>
 				<a className="regret yo-ico" onClick={this.back}>&#xe639;</a>
-				<span className="affirm"><Link to='/address'>保存</Link></span>
+				<span className="affirm"><a onClick={this.save}>保存</a></span>
 				</header>
 				<section>
-					
+					<div className="newaddress">
+						<div className='line'><span>收货人姓名:</span><div><input ref="name" type="text" placeholder="输入收货人"/></div></div>
+						<div className='line'><span>所在地区:</span><div><input ref="area" type="text" placeholder="所在地区"/></div></div>
+						<div className='line'><span>手机号码:</span><div><input ref="phone" type="text" placeholder="输入手机号"/></div></div>
+						<div className='line'><span>邮政编码:</span><div><input ref="code" type="text" placeholder="请输入邮政编码"/></div></div>
+					</div>
 				</section>
 			</div>
 		)
@@ -27,6 +34,20 @@ class Newaddress extends React.Component{
 	back() {
    		 browserHistory.goBack()
   	}
+	save(){
+		var name=this.refs.name.value
+		var _area=this.refs.area.value
+		var phone=this.refs.phone.value
+		var code=this.refs.code.value
+		if(name!="" && _area!="" && phone!="" && code!=""){
+			var obj={name:name,_area:_area,phone:phone,code:code}
+			localStorage.setItem("address",JSON.stringify(obj))
+			window.location.href="#/address"
+		}else{
+			alert("请填写完整")
+		}
+		
+	}
 	componentDidMount() {
 	    let title = '新建地址'
 	    this.props.onChange({
