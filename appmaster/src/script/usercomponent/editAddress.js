@@ -70,8 +70,7 @@ class EditAddress extends React.Component{
 				if(item!="null"&&item!=""){
 					list.push(JSON.parse(item))
 				}
-			})
-			
+			})	
 		}
 		this.setState({
 			arr:[list[this.props.params.type]],

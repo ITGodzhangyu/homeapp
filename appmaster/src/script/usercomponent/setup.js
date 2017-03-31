@@ -17,15 +17,15 @@ class Setup extends React.Component{
 		            <p className="title">{this.props.value}</p>
 		            <span className="regret yo-ico" onClick={this.back}>&#xe639;</span>
 	       		 </header>
-	       		 <section>
-	       		 	<ul>
-						<li><Link >意见反馈<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link >历史订单<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link >我的收藏<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link >我的地址<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link >我的账户<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link >帮助中心<span className="yo-ico">&#xe608;</span></Link></li>
+	       		 <section className="setup">
+	       		 	<ul className="user-setup">
+						<li><Link ><img src="/img/yijian.png"/>意见反馈<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link ><img src="/img/genxin.png"/>检测更新<span className="yo-ico">&#xe608;</span><span className="genxin">当前已是最新版本</span></Link></li>
+						<li><Link ><img src="/img/pingfen.png"/>给我评分<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link ><img src="/img/huancun.png"/>清除缓存<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link ><img src="/img/kefu.png"/>客服热线<span className="yo-ico">&#xe608;</span><span className="genxin">400-867-6688</span></Link></li>
 					</ul>
+	       		 	<button id="quit" onClick={this.quit}>退出登录</button>
 	       		 </section>
 			</div>
 		)
@@ -33,6 +33,10 @@ class Setup extends React.Component{
 	back() {
    		 browserHistory.goBack()
   	}
+	quit(){
+		localStorage.removeItem("userID")
+		window.location.href="#/user"
+	}
 	componentDidMount() {
 	    let title="设置"
 	    this.props.onChange({
