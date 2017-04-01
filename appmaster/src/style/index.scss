@@ -49,8 +49,17 @@
         position:absolute;
         top:0.44rem;
         width:100%;
+<<<<<<< HEAD
         overflow: scroll;
         bottom:0.44rem;
+=======
+        background:#fff;
+        overflow: scroll;
+        bottom:0.44rem;
+        .index_scroll{
+            position:absolute;
+        }
+>>>>>>> master
     }
     footer{
         height:.5rem;

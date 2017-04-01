@@ -1,21 +1,29 @@
 import React,{ Component } from "react"
+<<<<<<< HEAD
 import  {Link,hashHistory} from 'react-router'
 import Modal from '../../component_dev/modal/src/'
+=======
+>>>>>>> master
 var ReactDOM=require("react-dom");
 class Service extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
+<<<<<<< HEAD
 			title:"客服",
 			show1:false,
 			show2:false,
 			name:'',
 			phone:'',
 			main:''
+=======
+			title:"客服"
+>>>>>>> master
 		}
 	}
 	render(){
 		return (
+<<<<<<< HEAD
 			<div className="service">
 				<div className="service_header">
 					请留言,我们会尽快给您回复!
@@ -101,5 +109,13 @@ class Service extends React.Component{
 			show2:false
 		})
 	}
+=======
+			<div>
+				<div className="hh">客服</div>
+			</div>
+		)
+	}
+	
+>>>>>>> master
 }
 export default Service;
