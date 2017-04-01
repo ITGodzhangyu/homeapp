@@ -17,3 +17,32 @@
     }
     
 }
+
+.yo-header-s{
+    background: #fff;
+    .affirm{
+        color: #000;
+    }
+    .regret{
+        width: 75.78%;
+        height: 27px;
+        margin-top: 12px;
+        background: #F7F7F7;
+        border-radius: 10px;
+        margin-left: 2%;
+        overflow: hidden;
+        input{
+            float: right;
+            width: 90%;
+            height:100%;
+            border: none;
+            background: #F7F7F7;
+        }
+        img{
+            width:23px;
+            height: 23px;
+            float: left;
+            margin-top: 3px;
+        }
+    }
+}

@@ -12,3 +12,73 @@ $base-color: blue;
 body {
   background: $base-color;
 }
+.yo-header-h{
+    .title{
+        overflow:hidden;
+        height: 25px;
+        width: 2.2rem;
+        margin-top: 14px;
+        border-radius: 10px;
+        background: #fff;
+        img{
+            float: left;
+            width: 18px;
+            height: 21px;
+            margin-left: 5px;
+            margin-top: 3px;
+        }
+    }
+    .regret{
+        img{
+            width: 42px;
+            height: 29px;
+        }         
+    }
+    .affirm{
+        img{
+            width: 22px;
+            height: 14px;
+        }
+    }
+}
+
+.yo-header-h{
+    .title{
+        overflow:hidden;
+        height: 25px;
+        width: 2.2rem;
+        margin-top: 14px;
+        border-radius: 10px;
+        background: #fff;
+        img{
+            float: left;
+            width: 18px;
+            height: 21px;
+            margin-left: 5px;
+            margin-top: 3px;
+        }
+    }
+    .regret{
+        img{
+            width: 42px;
+            height: 29px;
+        }         
+    }
+    .affirm{
+        img{
+            width: 22px;
+            height: 14px;
+        }
+    }
+}
+
+.yo-header-cart{
+    background: #fff;
+    .affirm{
+        color: #000;
+    }
+    .title{
+        color: #000;
+        font-size: 18px;
+    }
+}

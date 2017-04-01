@@ -20,6 +20,11 @@ import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
 import Userheader from "./component/user-head"
 import Setup from "./usercomponent/setup.js"
+import Suggestion from "./usercomponent/suggestion.js"
+import Homeheader from './component/home-head' 
+import Searchheader from './component/search-head' 
+import Cartheader from './component/cart-head' 
+import Serverheader from './component/server-head'
 
 
 import React from 'react'
@@ -31,11 +36,11 @@ ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
 			<IndexRedirect to="/home"></IndexRedirect>
-			<Route path="home" component={Home}></Route>
-			<Route path="cart" component={Cart}></Route>
-			<Route path="search" component={Search}></Route>
+			<Route path="home" com={<Homeheader/>} component={Home}></Route>
+			<Route path="cart" com={<Cartheader/>} component={Cart}></Route>
+			<Route path="search" com={<Searchheader/>} component={Search}></Route>
 			<Route path="user" com={<Userheader/>} component={User}></Route>
-			<Route path="service" component={Service}></Route>
+			<Route path="service" com={<Serverheader/>} component={Service}></Route>
 		</Route>
 		<Route path="/myorder" component={Myorder}/>
 		<Route path="/collect" component={Collect}/>
@@ -50,6 +55,7 @@ ReactDOM.render(
 		<Route path="/editaddress/:type" component={EditAddress}/>
 		<Route path="/list" component={List}></Route>
 		<Route path="/setup" component={Setup}></Route>
+		<Route path="/suggestion" component={Suggestion}></Route>
 	</Router>
 	</Provider>,
 	document.getElementById("root")

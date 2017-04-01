@@ -2,6 +2,7 @@ import React,{ Component } from "react"
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 import { Link, browserHistory } from 'react-router'
+import Toast from "../../component_dev/toast/src"
 
 class Setup extends React.Component{
 	constructor(props){
@@ -19,8 +20,8 @@ class Setup extends React.Component{
 	       		 </header>
 	       		 <section className="setup">
 	       		 	<ul className="user-setup">
-						<li><Link ><img src="/img/yijian.png"/>意见反馈<span className="yo-ico">&#xe608;</span></Link></li>
-						<li><Link ><img src="/img/genxin.png"/>检测更新<span className="yo-ico">&#xe608;</span><span className="genxin">当前已是最新版本</span></Link></li>
+						<li><Link to="/suggestion"><img src="/img/yijian.png"/>意见反馈<span className="yo-ico">&#xe608;</span></Link></li>
+						<li><Link onClick={this.genxin}><img src="/img/genxin.png"/>检测更新<span className="yo-ico">&#xe608;</span><span className="genxin">当前已是最新版本</span></Link></li>
 						<li><Link ><img src="/img/pingfen.png"/>给我评分<span className="yo-ico">&#xe608;</span></Link></li>
 						<li><Link ><img src="/img/huancun.png"/>清除缓存<span className="yo-ico">&#xe608;</span></Link></li>
 						<li><Link ><img src="/img/kefu.png"/>客服热线<span className="yo-ico">&#xe608;</span><span className="genxin">400-867-6688</span></Link></li>
@@ -36,6 +37,9 @@ class Setup extends React.Component{
 	quit(){
 		localStorage.removeItem("userID")
 		window.location.href="#/user"
+	}
+	genxin(){
+		Toast.show("已是最新版本")
 	}
 	componentDidMount() {
 	    let title="设置"

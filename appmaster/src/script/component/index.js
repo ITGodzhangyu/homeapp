@@ -89,11 +89,5 @@ export default connect(
 
 
 
-//localStorage.setItem("cart",JSON.stringify(this.state.data)+"#");
-//		var cart=localStorage.getItem("cart");
-//		cart+=JSON.stringify(this.state.data)+"#";
-//		localStorage.setItem("cart",cart);
-//		var cart=localStorage.getItem("cart");
-//		var n=cart.split('#')
-//		console.log(JSON.parse(n[0]));
+
 

@@ -17,6 +17,9 @@
             line-height: 40px;
         }
         a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
             color: #7C7C7C;
             img{
                 width: 33px;
@@ -39,5 +42,59 @@
     border: none;
     border-radius: 5px;
     color: #fff;
+   }
 }
+
+.suggestion{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+    height: 1.4rem;
+    background: #fff;
+    @include flexbox();
+    .left{
+        margin-left: 2%;
+        width: 80px;
+        height: 1.3rem;
+        float: left;
+    }
+    .right{
+        margin-right: 2%;
+        @include flex();
+        height: 1.3rem;
+        float: left;
+        .text{
+            width: 100%;
+            height: 1。3rem;
+            resize: none;
+            border: none;
+            font-size: 15px;
+        }
+    }
+}
+.lianxi{
+        width: 100%;
+        height: 0.3rem;
+        background: #fff;
+        b{
+            float: left;
+            font-weight: normal;
+            padding-left: 2%;
+        }
+        input.xinxi{
+            border: none;
+            float: left;
+            margin-left: 5px;
+        }
+    }
+p.wenxin{
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-top: 10px;
+}    
+
+.tijiao{
+    color: #000 !important;
 }
