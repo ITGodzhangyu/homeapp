@@ -1,6 +1,7 @@
 import React,{ Component } from "react"
 var ReactDOM=require("react-dom");
 import  {Link,hashHistory} from 'react-router'
+import fetchData from '../util/fetch'
 class Cart extends React.Component{
 	constructor(props){
 		super(props)
@@ -9,11 +10,14 @@ class Cart extends React.Component{
 			have:true,
 			num:0.00,
 			shalist:[],
-			datalist:[]
+			datalist:[],
+			data:"",
+			value:1,
+			ani:"ani nni"
 		}
 	}
 	render(){
-		return (
+		return ( 
 			<div className="cart">
 				<div className="cart_header">
 					<Link to="/home">
@@ -28,68 +32,121 @@ class Cart extends React.Component{
 				<ul className="cart_main">
 					{this.state.datalist}
 				</ul>
+				<div className="cart_add">
+					<div className="cart_gou">
+						<div></div>
+					</div>
+					<span>总计 :<i>￥100.00</i> </span>
+					<button>结算(1)</button>
+				</div>
+				<div className="cart_ani" >
+					<div className={this.state.ani}>
+						<div className="aniup">
+							<span>修改数量 : </span>
+							<img onClick={this.guabi.bind(this,false)} src="http://st16.live800.com/live800/chatClient/v5mobile/skin/common/closebtn.png"/>
+						</div>
+						<div className="anicenter">
+							<span onClick={this.addvalue.bind(this,false)}>-</span>
+							<input type="text" value={this.state.value}/>
+							<span onClick={this.addvalue.bind(this,true)}>+</span>
+						</div>
+						<div className="anidown">
+							<span>取消</span>
+							<span>完成</span>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		)
 	}
-	componentDidMount(){
-		this.comeon()
-	}
 	comeon(){
-		var clist=[];
-		var cart=localStorage.getItem("cart");
-		var data=cart.split('#')
-		for(var i=0,len=data.length;i<len-1;i++){
-			var val=JSON.parse(data[i]);
-			clist.push(
-				<li>
-					<div className="list_header"></div>
-					<div className="cart_list">
-						<div className="cart_gou">
-							<div onClick={this.change.bind(this,val.Sn)}></div>
-						</div>
-						<img src={val.goodsImg}/>
-						<div className="cart_menu">
-							<p>{val.Caption}</p>
-							<g>价格 : ￥{val.Price}</g>
-							<div className="cart_num">
-								<span>数量 : </span>
-								<input type="number" min="1" onChange={this.numadd.bind(this,val.Price)}/>
+		var Sn=localStorage.getItem("Sn");
+		var dataSn=Sn.split(',');
+		var data=this.state.data;
+		let clist=data.map(val=>{
+			for(var i=0,len=dataSn.length;i<len-1;i++){	
+				if(val.Sn==dataSn[i]){
+					return(
+						<li key={i}>
+							<div className="list_header"></div>
+							<div className="cart_list">
+								<div className="cart_gou">
+									<div onClick={this.change.bind(this,val.Sn)}></div>
+								</div>
+								<img src={val.goodsImg}/>
+								<div className="cart_menu">
+									<p>{val.Caption}</p>
+									<g>价格 : ￥{val.Price}</g>
+									<div className="cart_num">
+										<span>数量 : </span>
+										<input type="number" min="1" onClick={this.guabi.bind(this,true)} onChange={this.numadd.bind(this,val.Price)}/>
+									</div>
+									<i>小计:<span>￥{this.state.num}</span></i>
+								</div>
 							</div>
-							<i>小计:<span>￥{this.state.num}</span></i>
-						</div>
-					</div>
-					
-				</li>
-			)
-		}
+							
+						</li>
+					)
+				}
+			}
+		})
 		this.setState({
 			datalist:clist
 		})
 	}
-	componentWillUnmount(){
+	componentDidMount(){
+	    fetchData('./json/list.json',function(res){
+			var data=eval(res);
+			this.setState({
+				data:data
+			})
+			this.comeon()
+		}.bind(this))
+	    
+  	}
+	guabi(type){
+		var ani='';
+		if(type){
+			ani='ani elastic-in-up'
+		}else{
+			ani='ani elastic-out-down'
+		}
+		this.setState({
+			ani:ani
+		})
+	}
+	addvalue(type){
+		var value=this.state.value;
+		if(type){
+			value++;
+		}else{
+			if(value>1){
+				value--;
+			}
+		}
+		this.setState({
+			value:value
+		})
 	}
 	delate(){
 		var slist=this.state.shalist;
-		var cart=localStorage.getItem("cart");
-		console.log(cart);
-		var data=cart.split('#');
-		var newlist=[];
-		for(var i=0,len=data.length;i<len-1;i++){	
-			var val=JSON.parse(data[i]);
-			for(var n=0,lok=slist.length;n<lok;n++){
-				if(val.Sn!==slist[n]){
-					newlist.push(data[i]+"#");
+		var Sn=localStorage.getItem("Sn");
+		if(Sn){
+			var dataSn=Sn.split(',');
+			for(var i=0,len=dataSn.length;i<len-1;i++){	
+				for(var n=0,lok=slist.length;n<lok;n++){
+					if(dataSn[i]===slist[n]){
+						dataSn.splice(i,1);
+					}
 				}
-				
 			}
+			Sn=dataSn.toString();
+			localStorage.removeItem("Sn");
+			localStorage.setItem("Sn",Sn);
+			this.comeon();
 		}
-		newlist.push("");
-		for(var i=0,len=cart.length;i<len;i++){
-			cart=String(newlist).replace("#,","#")
-		}
-		localStorage.setItem("cart",cart);
-		console.log(cart)
-		this.comeon();
+		
 	}
 	numadd(price,evt){
 		var n=evt.target.value;

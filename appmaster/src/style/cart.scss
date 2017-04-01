@@ -1,6 +1,7 @@
 .cart{
     height:100%;
-   width:100%;
+    width:100%;
+    position:relative;
     background:#ebebeb;
     .cart_header{
         height:0.65rem;
@@ -77,6 +78,10 @@
                 margin-right:0.05rem;
             }
             .cart_menu{
+                width:2rem;
+                p{
+                    width:1.9rem;
+                }
                 input{
                     width:0.44rem;
                     height:0.21rem;
@@ -97,4 +102,106 @@
         }
         
     }
+    .cart_add{
+        position:fixed;
+        bottom:0.5rem;
+        height:0.44rem;
+        background:#000;
+        width:100%;
+        @include flexbox();
+        @include align-content(center);
+        @include justify-content(center);
+        .cart_gou{
+                width:0.3rem;
+                margin:0.11rem 0.1rem;
+                div{
+                    width:0.2rem;
+                    height:0.2rem;
+                    border-radius:100%;
+                    border:1px solid #dcdcdc;
+                    background:#fff;
+               }
+        }
+        span{
+            @include flex(1);
+            color:#fff;
+            line-height:0.44rem;
+            i{
+                color:coral;
+            }
+        }
+        button{
+             width:0.8rem;
+             margin-right:0.1rem;
+             border-radius:0.05rem;
+             height:0.3rem;
+             background:coral; 
+             border:none;
+             margin-top:0.07rem; 
+             color:#fff;
+        }
+    }
+    .nni{
+        display:none;
+    }
+    .ani{
+        height:2rem;
+        position:fixed;
+        width:90%;
+        z-index:1000;
+        left:5%;
+        bottom:0.1rem;
+        background:#fff;
+        border-top-left-radius:0.1rem;
+        border-top-right-radius:0.1rem;
+        .aniup{
+            height:0.4rem;
+            border-top-left-radius:0.1rem;
+            border-top-right-radius:0.1rem;
+            border-bottom:1px solid #D1D1D1;
+            line-height:0.4rem;
+            padding-left:0.05rem;
+            img{
+                width:0.2rem;
+                float:right;
+                margin-top:0.05rem;
+                margin-right:0.05rem;
+            }
+        }
+        .anicenter{
+            height:1.2rem;
+            @include flexbox();
+            color:#000;
+            @include align-content(center);
+            @include justify-content(center);
+            span{
+                color:#fff;
+                display:block;
+                margin:0.5rem 0.2rem;
+                width:0.2rem;
+                height:0.2rem;
+                background:#000;
+                line-height:0.2rem;
+                text-align:center;
+                font-size:0.2rem;
+            }
+            input{
+                margin-top:0.47rem;
+                height:0.26rem;
+                width:0.7rem;
+                text-align:center;
+            }
+        }
+        .anidown{
+            height:0.4rem;
+            background:#000;
+            @include flexbox();
+            @include align-content(center);
+            @include justify-content(space-between);
+            color:#eee;
+            line-height:0.4rem;
+            padding:0 0.1rem;
+        }
+    }
+        
 }

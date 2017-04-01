@@ -40,14 +40,13 @@ class Cart extends React.Component{
 		}.bind(this))
   	}
 	add(){
-		if(localStorage.getItem("cart")){
-			var cart=localStorage.getItem("cart");
-			cart+=JSON.stringify(this.state.data)+"#"
-			localStorage.setItem("cart",cart);
+		if(localStorage.getItem("Sn")){
+			var Sn=localStorage.getItem("Sn");
+			Sn+=this.state.data.Sn+",";
+			localStorage.setItem("Sn",Sn)
 		}else{
-			localStorage.setItem("cart",JSON.stringify(this.state.data)+"#");
+			localStorage.setItem("Sn",this.state.data.Sn+",");
 		}
-		
 	}
 }
 export default Cart;

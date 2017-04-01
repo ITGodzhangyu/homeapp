@@ -15,6 +15,7 @@ import Register from "./usercomponent/register.js"
 import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
+import Homelist from "./component/header.js"
 import Userheader from "./component/user-head"
 import Detail from './component/detail'
 import { store } from './redux/store'
@@ -28,10 +29,10 @@ ReactDOM.render(
 	<Provider store={store}>
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
-			<IndexRedirect to="/home"></IndexRedirect>
-			<Route path="home" component={Home}></Route>
-			<Route path="cart" component={Cart}></Route>
-			<Route path="search" component={Search}></Route>
+			<IndexRedirect to="/home" title="pp"></IndexRedirect>
+			<Route path="home" title="pp" component={Home}></Route>
+			<Route path="cart" title="shouye" component={Cart}></Route>
+			<Route path="search" title="shouye" component={Search}></Route>
 			<Route path="user" component={User}></Route>
 			<Route path="service" component={Service}></Route>
 		</Route>
