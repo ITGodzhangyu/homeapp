@@ -1,15 +1,11 @@
 import React,{ Component } from "react"
 var ReactDOM=require("react-dom");
-<<<<<<< HEAD
 import  {Link,hashHistory} from 'react-router'
 import fetchData from '../util/fetch'
-=======
->>>>>>> master
 class Cart extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-<<<<<<< HEAD
 			title:"购物车",
 			have:true,
 			num:0.00,
@@ -196,17 +192,5 @@ class Cart extends React.Component{
 			shalist:slist
 		})
 	}
-=======
-			title:"购物车"
-		}
-	}
-	render(){
-		return (
-			<div>
-				<div className="hh">购物车</div>
-			</div>
-		)
-	}
->>>>>>> master
 }
 export default Cart;

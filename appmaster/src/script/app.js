@@ -15,13 +15,9 @@ import Register from "./usercomponent/register.js"
 import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
-<<<<<<< HEAD
 import Homelist from "./component/header.js"
 import Userheader from "./component/user-head"
 import Detail from './component/detail'
-=======
-import Userheader from "./component/user-head"
->>>>>>> master
 import { store } from './redux/store'
 import {Provider} from 'react-redux'
 import React from 'react'
@@ -33,7 +29,6 @@ ReactDOM.render(
 	<Provider store={store}>
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
-<<<<<<< HEAD
 			<IndexRedirect to="/home" title="pp"></IndexRedirect>
 			<Route path="home" title="pp" component={Home}></Route>
 			<Route path="cart" title="shouye" component={Cart}></Route>
@@ -43,16 +38,6 @@ ReactDOM.render(
 		</Route>
 		<Route path="/detail/:Sn" component={Detail}/>
 		<Route path="/list/:id" component={List}></Route>
-=======
-			<IndexRedirect to="/home"></IndexRedirect>
-			<Route path="home" component={Home}></Route>
-			<Route path="cart" component={Cart}></Route>
-			<Route path="search" component={Search}></Route>
-			<Route path="user" component={User}></Route>
-			<Route path="service" component={Service}></Route>
-		</Route>
-		<Route path="list" component={List}></Route>
->>>>>>> master
 		<Route path="/myorder" component={Myorder}/>
 		<Route path="/collect" component={Collect}/>
 		<Route path="/account" component={Account}/>

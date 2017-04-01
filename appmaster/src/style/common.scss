@@ -1,18 +1,12 @@
 #root{
     height:100%;
     width:100%;
-<<<<<<< HEAD
     background:#fff;
     font-family: "微软雅黑",STHeiti,Arial,"MS Gothic", "Times New Roman", "PMingLiU";
 }
 @import "./usage/fragment/yo-header";
 @import "./lib/ani/elastic-in-up";
 @import "./lib/ani/elastic-out-down";
-=======
-     background:#fff;
-}
-@import "./usage/fragment/yo-header";
->>>>>>> master
 @font-face {
   font-family: yofont;
   src: url(/iconfont/iconfont.woff) format("woff"), url(/iconfont/iconfont.ttf) format("truetype"); 

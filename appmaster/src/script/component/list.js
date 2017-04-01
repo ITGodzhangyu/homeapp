@@ -44,18 +44,12 @@ class kindList extends React.Component{
 		   			let flist=numlist.map(val=>{
 			       		return (<li>
 				       			<List.LazyImage  className="goodsImg" src={val.goodsImg}/>
-<<<<<<< HEAD
 				       			<p>{val.Caption}</p>
 				       			<div className="goodsPrice">
 				       				<span>￥{val.Price}</span>
 				       				<Link to="cart"  title="购物车" activeClassName="active">
 		       							<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
 		       						</Link>
-=======
-				       			<div className="goodsPrice">
-				       				<span>{val.Price}</span>
-				       				<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
->>>>>>> master
 				       			</div>
 			       			</li>)
 			      	})
@@ -67,7 +61,6 @@ class kindList extends React.Component{
 			    }
 	   		}else{
 		      	let flist=data.map(val=>{
-<<<<<<< HEAD
 		       		return (
 		       		<li>
 		       			<List.LazyImage  className="goodsImg" src={val.goodsImg}/>
@@ -78,15 +71,6 @@ class kindList extends React.Component{
 		       					<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
 		       				</Link>
 		       			</div>
-=======
-		       		return (<li>
-			       			<List.LazyImage  className="goodsImg" src={val.goodsImg}/>
-			       			<p>{val.catalogName}</p>
-			       			<div className="goodsPrice">
-			       				<span>{val.Price}</span>
-			       				<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
-			       			</div>
->>>>>>> master
 		       		</li>)
 		       	})
 		      	this.setState({
@@ -123,15 +107,7 @@ class kindList extends React.Component{
 		this.filter(this.state.str)
 	}
 	componentDidMount(){
-<<<<<<< HEAD
 		this.filter(this.props.params.id);
-=======
-		this.filter("太")
-//		this.setState({
-//			str:this.props
-//		})
-//		console.log(this.props.router)
->>>>>>> master
 	}
 }
 export default kindList;
