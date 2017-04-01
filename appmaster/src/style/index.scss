@@ -1,0 +1,95 @@
+.main{
+    @include flexbox();
+    @include flex-direction(column);
+    height:100%;
+    position:relative;
+    overflow: scroll;
+    header{
+        position:absolute;
+        top:0;
+        z-index:100;
+        height:.44rem;
+        background:rgba(255,172,13,0.5);
+        text-align:center;
+        width:100%;
+        @include flexbox();
+        line-height:.44rem;
+        @include align-content(center);
+        @include justify-content(center);
+        .index-search{
+            width:2.8rem;
+            height:0.26rem;
+            background:#fff;
+            border-radius:0.2rem;
+            margin:0.09rem 0.1rem 0.09rem 0.1rem;
+             @include flexbox();
+            i{
+                font-size:0.26rem;
+                color:#000;
+                line-height:0.26rem;
+                margin-left:0.12rem;
+            }
+        }
+        .index-logo{
+            margin-left:0.07rem;
+            width:0.42rem;
+            height:0.3rem;
+            margin-top:0.07rem;
+            vertical-align: middle;
+            
+        }
+        i{
+            margin-right:0.03rem;
+            font-size:0.25rem;
+            color:#fff;
+        }
+    }
+    section{
+        position:absolute;
+        top:0.44rem;
+        width:100%;
+        background:#fff;
+        overflow: scroll;
+        bottom:0.44rem;
+        .index_scroll{
+            position:absolute;
+        }
+    }
+    footer{
+        height:.5rem;
+        background:#fff;
+        width:100%;
+        z-index:100;
+        position:fixed;
+        bottom:0;
+        ul{
+            height:100%;
+            width:100%;
+            @include flexbox();
+            li{
+                @include flex();
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-content(center);
+                @include justify-content(center);
+                text-align:center;
+                a{
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include align-content(center);
+                    @include justify-content(center);
+                    font-weight: bold;
+                    color:rgba(0,0,0,0.5);
+                    font-size:0.12rem;
+                    i{
+                        font-size:0.22rem;
+                       
+                    }
+                    &.active{
+                        color:#f0660d;
+                    }
+                }
+            }
+        }
+    }
+}

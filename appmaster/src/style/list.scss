@@ -1,0 +1,70 @@
+
+.list{
+    .list_scroll{
+        position:absolute;
+    }
+    .list_main{
+        ul{
+            margin:0 .05rem;
+            width:100%;
+            li{
+                    
+                    background:#fff;
+                    float:left;
+                    width:50%;
+                    border-top:.01rem solid #666666;
+                    border-right:.01rem solid #666666;
+                    a{
+                        float:left;
+                        display:block;
+                        height:100%;
+                        width:100%;
+                        .goodsImg{
+                            height:100%;
+                            width:90%;
+                            float:left;
+                        }
+                        p{
+                            height:0.34rem;
+                            width:80%;
+                            font:100 .12rem "宋体";
+                            overflow: hidden;
+                            padding-top:0.06rem;
+                        }
+                        
+                    }
+                    .goodsPrice{
+                          height:0.4rem;
+                          margin-top:0.1rem;
+                          span{
+                              height:0.4rem;
+                              width:.4rem;
+                              font:900 .16rem "宋体";
+                              color:#ff9c00;
+                              float:left;
+                              line-height:0.4rem;
+                          }
+                          .list_cart{
+                              height:.3rem;
+                              width:.3rem;
+                              float:right;
+                              margin-right:.15rem;
+                              margin-top:.05rem;
+                          }  
+                        }
+                    
+            }
+        }
+    }
+}
+@import "./usage/fragment/yo-header";
+@include yo-header (  
+            $name:a,
+            $height: .56rem,
+            $font-size: .3rem,
+            $item-ico-size:.3rem,
+            $item-ico-color:#999,
+            $color:#999,
+            $border-color:#666,
+            $bgcolor:#fff
+        )
