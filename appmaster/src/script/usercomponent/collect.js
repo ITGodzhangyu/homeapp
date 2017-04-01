@@ -34,7 +34,7 @@ class Collect extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/user"
   	}
 	componentDidMount() {
 	    let title="我的收藏"

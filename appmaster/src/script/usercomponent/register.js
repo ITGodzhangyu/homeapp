@@ -66,7 +66,7 @@ class Register extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/login"
   	}
 	componentDidMount() {
 	    let title = '注册'

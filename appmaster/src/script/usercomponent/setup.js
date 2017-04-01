@@ -32,14 +32,14 @@ class Setup extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/user"
   	}
 	quit(){
 		localStorage.removeItem("userID")
 		window.location.href="#/user"
 	}
 	genxin(){
-		Toast.show("已是最新版本")
+		setTimeout(function(){Toast.show("已是最新版本")},2000)
 	}
 	componentDidMount() {
 	    let title="设置"

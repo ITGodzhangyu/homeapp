@@ -30,7 +30,7 @@ class Address extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/user"
   	}
 	componentWillMount(){
 		if(window.localStorage){

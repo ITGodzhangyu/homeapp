@@ -44,7 +44,7 @@ class User extends React.Component{
 		var _arr=[];
 		if(localStorage.getItem("userID")){
 			var username=localStorage.getItem("userID");
-			_arr.push(<div className='user-box'><img src="/img/wo.png"/><p>{username}</p></div>)
+			_arr.push(<div className='user-box'><span className="yo-ico touxiang" >&#xe665;</span><p>{username}</p></div>)
 		}else{
 			_arr.push(<div className='user-box'><p>欢迎来到6688</p><div className="box"><Link to="/login">登陆 / 注册</Link></div></div>)
 		}

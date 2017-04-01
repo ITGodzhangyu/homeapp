@@ -31,7 +31,7 @@ class Newaddress extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/address"
   	}
 	save(){
 		var name=this.refs.name.value

@@ -22,7 +22,7 @@ class Account extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/user"
   	}
 	componentDidMount() {
 	    let title = '我的账户'
@@ -36,3 +36,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Account)
+
+
+
+
