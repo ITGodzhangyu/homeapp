@@ -61,36 +61,51 @@ class Cart extends React.Component{
 		)
 	}
 	comeon(){
-		var Sn=localStorage.getItem("Sn");
-		var dataSn=Sn.split(',');
-		var data=this.state.data;
-		let clist=data.map(val=>{
-			for(var i=0,len=dataSn.length;i<len-1;i++){	
-				if(val.Sn==dataSn[i]){
-					return(
-						<li key={i}>
-							<div className="list_header"></div>
-							<div className="cart_list">
-								<div className="cart_gou">
-									<div onClick={this.change.bind(this,val.Sn)}></div>
-								</div>
-								<img src={val.goodsImg}/>
-								<div className="cart_menu">
-									<p>{val.Caption}</p>
-									<g>价格 : ￥{val.Price}</g>
-									<div className="cart_num">
-										<span>数量 : </span>
-										<input type="number" min="1" onClick={this.guabi.bind(this,true)} onChange={this.numadd.bind(this,val.Price)}/>
+		var clist=[];
+		if(localStorage.getItem("Sn")&&localStorage.getItem("Sn")!==''){
+			var Sn=localStorage.getItem("Sn");
+			var dataSn=Sn.split(',');
+			var data=this.state.data;
+			clist=data.map(val=>{
+				for(var i=0,len=dataSn.length;i<len-1;i++){	
+					if(val.Sn==dataSn[i]){
+						return(
+							<li key={i}>
+								<div className="list_header"></div>
+								<div className="cart_list">
+									<div className="cart_gou">
+										<div onClick={this.change.bind(this,val.Sn)}></div>
 									</div>
-									<i>小计:<span>￥{this.state.num}</span></i>
+									<img src={val.goodsImg}/>
+									<div className="cart_menu">
+										<p>{val.Caption}</p>
+										<g>价格 : ￥{val.Price}</g>
+										<div className="cart_num">
+											<span>数量 : </span>
+											<input type="number" min="1" onClick={this.guabi.bind(this,true)} onChange={this.numadd.bind(this,val.Price)}/>
+										</div>
+										<i>小计:<span>￥{this.state.num}</span></i>
+									</div>
 								</div>
-							</div>
-							
-						</li>
-					)
+								
+							</li>
+						)
+					}
 				}
-			}
-		})
+			})
+		}else{
+			clist.push(
+				<li className="pacecart">
+					<img src="http://m.6688.com/shop/MobileUI/img/mine/order/cart.png"/>
+					<p>购物车还是空的,去购物吧!</p>
+					<div className="pacebtn">
+						<Link to="/home"><button>随便逛逛</button></Link>
+						<Link to=""><button className="last">我的收藏</button></Link>
+					</div>
+				</li>
+			)
+		}
+		console.log(clist);
 		this.setState({
 			datalist:clist
 		})

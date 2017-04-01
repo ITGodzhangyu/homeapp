@@ -45,6 +45,35 @@
         }
     }
     .cart_main{
+        .pacecart{
+             margin-top:1rem;
+            width:100%;
+            text-align:center;
+            img{
+                display:block;
+                margin:0 auto;
+                width:.8rem;
+                height:.8rem;
+            }
+            p{
+                height:0.5rem;
+                line-height:0.5rem;
+                font-size:0.16rem;
+            }
+            a{
+                margin-right:0.25rem;
+                margin-left:0.25rem;
+                color: #333; 
+                button{
+                    &.last{
+                        background:Orange;
+                    }
+                    border-radius:0.05rem;
+                    width:1rem;
+                    height:0.36rem;
+                }
+            }
+        }
         .list_header{
             height:0.1rem;
             border-top:1px solid #e7e7e7;
