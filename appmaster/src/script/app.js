@@ -1,8 +1,11 @@
-require('../style/app.scss')
+import '../style/app.scss'
+import {Provider} from 'react-redux'
+import { store } from "./redux/store"
 import Home from "./component/home.js"
 import User from "./component/user.js"
 import Cart from "./component/cart.js"
 import Search from "./component/search.js"
+import List from "./component/list.js"
 import Service from "./component/service.js"
 import Address from "./usercomponent/address.js"
 import Help from "./usercomponent/help.js"
@@ -15,30 +18,32 @@ import Register from "./usercomponent/register.js"
 import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
-import Homelist from "./component/header.js"
 import Userheader from "./component/user-head"
-import Detail from './component/detail'
-import { store } from './redux/store'
-import {Provider} from 'react-redux'
+import Setup from "./usercomponent/setup.js"
+import Suggestion from "./usercomponent/suggestion.js"
+import Homeheader from './component/home-head' 
+import Searchheader from './component/search-head' 
+import Cartheader from './component/cart-head' 
+import Serverheader from './component/server-head'
+import Detail   from './component/detail'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Index from './component/index'
-import List from "./component/list.js"
 import  {Router,Route,IndexRoute,IndexRedirect,Link,hashHistory} from 'react-router'
+import Index from './component/index'
 ReactDOM.render(
 	<Provider store={store}>
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
-			<IndexRedirect to="/home" title="pp"></IndexRedirect>
-			<Route path="home" title="pp" component={Home}></Route>
-			<Route path="cart" title="shouye" component={Cart}></Route>
-			<Route path="search" title="shouye" component={Search}></Route>
-			<Route path="user" component={User}></Route>
-			<Route path="service" component={Service}></Route>
+			<IndexRedirect to="/home"></IndexRedirect>
+			<Route path="home" com={<Homeheader/>} component={Home}></Route>
+			<Route path="cart" com={<Cartheader/>} component={Cart}></Route>
+			<Route path="search" com={<Searchheader/>} component={Search}></Route>
+			<Route path="user" com={<Userheader/>} component={User}></Route>
+			<Route path="service" com={<Serverheader/>} component={Service}></Route>
 		</Route>
-		<Route path="/detail/:Sn" component={Detail}/>
-		<Route path="/list/:id" component={List}></Route>
 		<Route path="/myorder" component={Myorder}/>
+		<Route path="/detail/:Sn" component={Detail}/>
 		<Route path="/collect" component={Collect}/>
 		<Route path="/account" component={Account}/>
 		<Route path="/history" component={Historyorder}/>
@@ -48,10 +53,12 @@ ReactDOM.render(
 		<Route path="/register" component={Register}/>
 		<Route path="/newaddress" component={Newaddress}/>
 		<Route path="/forget" component={Forget}/>
-		<Route path="/editaddress" component={EditAddress}/>
+		<Route path="/editaddress/:type" component={EditAddress}/>
+		<Route path="/list/:id" component={List}></Route>
+		<Route path="/setup" component={Setup}></Route>
+		<Route path="/suggestion" component={Suggestion}></Route>
 	</Router>
 	</Provider>,
 	document.getElementById("root")
 )
-
 

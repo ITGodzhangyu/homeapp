@@ -1,40 +1,23 @@
 .cart{
     height:100%;
     width:100%;
-    position:relative;
     background:#ebebeb;
+    position:relative;
     .cart_header{
-        height:0.65rem;
+        height:0.3rem;
         position:relative;
         background:#fff;
-        .cart_gohome{
-            position:absolute;
-            top:0.03rem;
-            width:0.3rem;
-            height:0.3rem;
-            text-align:center;
-            line-height:0.28rem;
-            border-radius:0.3rem;
-            background:#e7e7e7;
-            .yo-ico{
-                font-size:0.18rem;
-                color:#fff;
-                padding:0.02rem 0.01rem;
-                background:#999;
-                border-radius:0.2rem;
-            }
-        }
         
-        h2{
-            padding-top:0.05rem;
-            text-align:center;
-            font-size:0.16rem;
-        }
-        span{
+        button{
             font-size:.14rem;
+            width:.6rem;
+            height:.25rem;
             position:absolute;
             right:0.15rem;
-            top:0.17rem;
+            top:.2rem;
+            border-radius:0.02rem;
+            border:none;
+            background:coral;
         }
         p{
             width:100%;
@@ -234,3 +217,20 @@
     }
         
 }
+.cart_gohome{
+            position:absolute;
+            top:0.03rem;
+            width:0.3rem;
+            height:0.3rem;
+            text-align:center;
+            line-height:0.28rem;
+            border-radius:0.3rem;
+            background:#e7e7e7;
+            .yo-ico{
+                font-size:0.18rem;
+                color:#fff;
+                padding:0.02rem 0.01rem;
+                background:#999;
+                border-radius:0.2rem;
+            }
+        }

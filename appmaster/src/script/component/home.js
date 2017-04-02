@@ -117,7 +117,6 @@ class Home extends React.Component{
 	fetchRefresh(url){
 		fetchData(url,function(res){
 	    	 var data=eval(res)
-	   		console.log(data)
 	        var list1=[],list2=[];
 	        for(var i=0;i<16;i++){
 	        	if(i<8){

@@ -20,13 +20,8 @@ class Cart extends React.Component{
 		return ( 
 			<div className="cart">
 				<div className="cart_header">
-					<Link to="/home">
-						<div className="cart_gohome">
-							<i className="yo-ico">&#xe611;</i>
-						</div>
-					</Link>
-					<h2>购物车</h2>
-					<span onClick={this.delate.bind(this)}>删除</span>
+					
+					<button onClick={this.delate.bind(this)}>删除</button>
 					<p>每单满300就95折,您还差230.1元就可以享受啦</p>
 				</div>
 				<ul className="cart_main">
@@ -105,7 +100,6 @@ class Cart extends React.Component{
 				</li>
 			)
 		}
-		console.log(clist);
 		this.setState({
 			datalist:clist
 		})
@@ -166,7 +160,6 @@ class Cart extends React.Component{
 	numadd(price,evt){
 		var n=evt.target.value;
 		var price=parseInt(price)*n;
-		console.log(price)
 		this.setState({
 			num:price
 		})
