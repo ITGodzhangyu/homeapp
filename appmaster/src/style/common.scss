@@ -1,10 +1,26 @@
 #root{
     height:100%;
     width:100%;
-     background:#fff;
+    background:#fff;
+    font-family: "微软雅黑",STHeiti,Arial,"MS Gothic", "Times New Roman", "PMingLiU";
 }
 @import "./usage/fragment/yo-header";
+@import "./lib/ani/elastic-in-up";
+@import "./lib/ani/elastic-out-down";
 @font-face {
   font-family: yofont;
   src: url(/iconfont/iconfont.woff) format("woff"), url(/iconfont/iconfont.ttf) format("truetype"); 
+}
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfontuser.woff) format("woff"),
+   url(/iconfont/iconfontuser.ttf) format("truetype");
+}
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont_share.woff) format("woff"), url(/iconfont/iconfont_share.ttf) format("truetype"); 
+}
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/detail_iconfont.woff) format("woff"), url(/iconfont/detail_iconfont.ttf) format("truetype"); 
 }

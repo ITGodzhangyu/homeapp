@@ -17,6 +17,7 @@ class Kind extends React.Component{
 	render(){
 		return (
 			<div className="search">
+				
 				<List 
 					extraClass ="yo-scroller yo-scroller-fullscreen"
 				>
@@ -28,25 +29,17 @@ class Kind extends React.Component{
 		)
 	}
 	data(st){
-		console.log(st);
 		this.setState({
 			str:st
 		})
-		console.log(this.props)
-//		let title=str;
-//		this.props.onChange({
-//			type:'SETTITLE',
-//			title:title
-//		})
 	}
 	componentDidMount(){
 		fetchData('./json/nav.json',function(res){
 			var data=eval(res)
-			   	console.log(data)
 			     let slist=data.map(val=>{
 			       	return (
 			       		<li className="search_list" onClick={this.data.bind(this,val.catalogName) }>
-			       			<Link to="/list" title={val.catalogName}>
+			       			<Link to={`/list/${val.catalogName}`} title={val.catalogName}>
 			       				{val.catalogName}
 			       			</Link>
 			       		</li>
@@ -62,4 +55,3 @@ export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Kind)
-//module.exports=Kind;
