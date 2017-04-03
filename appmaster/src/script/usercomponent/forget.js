@@ -31,7 +31,7 @@ class Forget extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/login"
   	}
 	componentDidMount() {
 	    let title = '找回密码'

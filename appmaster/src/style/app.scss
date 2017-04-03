@@ -15,29 +15,29 @@ body {
 .yo-header-h{
     .title{
         overflow:hidden;
-        height: 25px;
+        height: 0.25rem;
         width: 2.2rem;
-        margin-top: 14px;
-        border-radius: 10px;
+        margin-top: 0.14rem;
+        border-radius: 0.10rem;
         background: #fff;
         img{
             float: left;
-            width: 18px;
-            height: 21px;
-            margin-left: 5px;
-            margin-top: 3px;
+            width: 0.18rem;
+            height: 0.21rem;
+            margin-left: 0.05rem;
+            margin-top: 0.03rem;
         }
     }
     .regret{
         img{
-            width: 42px;
-            height: 29px;
+            width: 0.42rem;
+            height: 0.29rem;
         }         
     }
     .affirm{
         img{
-            width: 22px;
-            height: 14px;
+            width: 0.22rem;
+            height: 0.14rem;
         }
     }
 }
@@ -45,40 +45,30 @@ body {
 .yo-header-h{
     .title{
         overflow:hidden;
-        height: 25px;
+        height: 0.25rem;
         width: 2.2rem;
-        margin-top: 14px;
-        border-radius: 10px;
+        margin-top:0.14rem;
+        border-radius: 0.1rem;
         background: #fff;
         img{
             float: left;
-            width: 18px;
-            height: 21px;
-            margin-left: 5px;
-            margin-top: 3px;
+            width: 0.18rem;
+            height: 0.21rem;
+            margin-left: 0.05rem;
+            margin-top: 0.03rem;
         }
     }
     .regret{
         img{
-            width: 42px;
-            height: 29px;
+            width: 0.42rem;
+            height: 0.29rem;
         }         
     }
     .affirm{
         img{
-            width: 22px;
-            height: 14px;
+            width: 0.22rem;
+            height: 0.14rem;
         }
     }
 }
 
-.yo-header-cart{
-    background: #fff;
-    .affirm{
-        color: #000;
-    }
-    .title{
-        color: #000;
-        font-size: 18px;
-    }
-}

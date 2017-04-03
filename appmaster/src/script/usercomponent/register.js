@@ -41,7 +41,6 @@ class Register extends React.Component{
 			Toast.show("请阅读交易条款")
 		}
 	}
-	
 	render(){
 		return (
 			<div className="main">

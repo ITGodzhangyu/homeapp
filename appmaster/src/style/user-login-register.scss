@@ -2,18 +2,18 @@
 .user-login{
     margin-top:10px ;
     width: 100%;
-    height: 88px;
+    height: 0.88rem;
     background: #fff;
     .login-username{
-        height: 44px;
+        height: 0.44rem;
         width: 100%;
         @include flexbox();
         span{
-            width:44px;
-            height: 44px;
+            width:0.44rem;
+            height: 0.44rem;
             color:#afafaf;
             text-align: center;
-            line-height: 44px;
+            line-height: 0.44rem;
             font-size: 18px;
         }
         input{
@@ -24,16 +24,16 @@
         }
     }
     .login-password{
-        height: 44px;
+        height: 0.44rem;
         width: 100%;
         @include flexbox();
          span{
             float: left;
-            width:44px;
-            height: 44px;
+            width:0.44rem;
+            height: 0.44rem;
             color:#afafaf;
             text-align: center;
-            line-height: 44px;
+            line-height: 0.44rem;
             font-size: 20px;
         }input{
             @include flex();
@@ -46,14 +46,14 @@
     .tab{
         padding-top: 20px;
         width: 100%;
-        height: 60px;
+        height: 0.60rem;
         @include flexbox();
         @include justify-content(space-around);
         font-size: 16px;
         .toRegister{
             display: inline-block;
-            width: 150px;
-            height: 40px;
+            width: 1.50rem;
+            height: 0.40rem;
             background: #f6f6f6;
             text-align: center;
             line-height: 40px;
@@ -63,12 +63,12 @@
                 display: block;
                 width: 100%;
                 height: 100%;
-                letter-spacing: 2px;
+                letter-spacing: 0.02rem;
             }
         }
         button{
-            width: 150px;
-            height: 40px;
+            width: 1.50rem;
+            height: 0.40rem;
             background: #ff9500;
             border: none;
             color: #fff;
@@ -79,7 +79,7 @@
     p{
         font-size: 12px;
         width: 90%;
-        padding-top: 20px;
+        padding-top: 0.20rem;
         a{
            float: right;
         }
@@ -94,14 +94,14 @@
     .weibo{
         margin-top: 10px;
         width: 100%;
-        height: 83px;
+        height: 0.83rem;
         @include flexbox();
         @include justify-content(center);
         a{
             display: inline-block;
             margin-top: 10px;
-            width: 56px;
-            height: 83px;
+            width: 0.56rem;
+            height: 0.83rem;
             img{
                 width: 100%;
                 height: 100%;
@@ -119,20 +119,20 @@
     height: auto;
     h2.blank{
         width: 100%;
-        height: 30px;
+        height: 0.30rem;
     }
     div{
         width: 100%;
-        height: 44px;
+        height: 0.44rem;
         background: #fff;
         @include flexbox();
         @include border(2px 0 0 0,#ebebeb)
         span{
             display: inline-block;
-            width: 44px;
-            height: 46px;
+            width: 0.44rem;
+            height: 0.46rem;
             text-align: center;
-            line-height: 44px;
+            line-height: 0.44rem;
             color: #d1d1d1;
             font-size: 18px;
         }
@@ -146,8 +146,8 @@
                 @include flex()
             }
             button{
-                width: 90px;
-                height: 38px;
+                width: 0.90rem;
+                height: 0.38rem;
                 color: white;
                 margin-right: 10px;
                 background: #ff9500;
@@ -175,9 +175,9 @@
     button{
         width: 96%;
         margin-left: 2%;
-        height: 35px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        height: 0.35rem;
+        margin-top: 0.20rem;
+        margin-bottom: 0.20rem;
         background: #ff9500;
         border: none;
         border-radius: 5px;

@@ -16,7 +16,7 @@ class EditAddress extends React.Component{
 		var rr=[]
 		this.state.arr.map(function(item){
 			rr.push(<div className="newaddress"><div className='line'><span>收货人姓名:</span><div><input ref="name" type="text" defaultValue={item.name} placeholder="输入收货人"/></div></div>
-					<div className='line'><span>所在地区:</span><div><input type="text" ref="_area" defaultValue={item._area} placeholder="所在地区"/></div></div>
+					<div className='line Txt'><span>所在地区:</span><div><textarea ref="_area" defaultValue={item._area}  placeholder="最多100字"></textarea></div></div>
 					<div className='line'><span>手机号码:</span><div><input type="text" ref="phone" defaultValue={item.phone} placeholder="输入手机号"/></div></div>
 					<div className='line'><span>邮政编码:</span><div><input type="text" ref="code" defaultValue={item.code} placeholder="请输入邮政编码"/></div></div></div>)
 		})
@@ -36,6 +36,7 @@ class EditAddress extends React.Component{
 	back() {
    		 browserHistory.goBack()
   	}
+
 	save(){
 		var name=this.refs.name.value
 		var _area=this.refs._area.value
@@ -83,7 +84,6 @@ class EditAddress extends React.Component{
 	      type: 'SETTITLE',
 	      title: title
 	    })
-	    console.log(11,this.state.arr)
 	 }
 }
 export default connect(

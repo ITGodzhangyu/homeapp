@@ -13,7 +13,7 @@ class Address extends React.Component{
 		}
 	}
 	render(){
-		
+
 		return (
 			<div className="main">
 				<header className="yo-header yo-header-c">
@@ -23,7 +23,7 @@ class Address extends React.Component{
 		       </header>
 		       <section>
 		       		<ul className='user-address'>
-		       			{this.state._arr}
+		       			{this.state._arr}	
 		       		</ul>
 		       </section>
 	       	</div>	
@@ -84,6 +84,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Address)
+
 
 
 

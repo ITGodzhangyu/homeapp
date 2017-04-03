@@ -17,7 +17,15 @@ class Account extends React.Component{
 		            <p className="title">{this.props.value}</p>
 		            <span className="regret yo-ico" onClick={this.back}>&#xe639;</span>
 	       		 </header>
-	       		 <section></section>
+	       		 <section>
+	       		 	<div className="accountDetail">
+			       		 <Link to="/account/eyuan" activeClassName="clickcolor">e元明细</Link>
+			       		 <Link to="/account/yfu"   activeClassName="clickcolor">预付款明细</Link>
+	       			</div>
+	       			<div className="_account">
+	       				{this.props.children}
+	       			</div>
+	       		</section>
 	       	</div>	
 		)
 	}
@@ -36,6 +44,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Account)
+
 
 
 

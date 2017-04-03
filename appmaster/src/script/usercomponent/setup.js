@@ -35,8 +35,13 @@ class Setup extends React.Component{
    		 window.location.href="#/user"
   	}
 	quit(){
-		localStorage.removeItem("userID")
-		window.location.href="#/user"
+		if(localStorage.getItem("userID")){
+			localStorage.removeItem("userID")
+			window.location.href="#/user"
+		}else{
+			Toast.show("您还未登陆")
+		}
+		
 	}
 	genxin(){
 		setTimeout(function(){Toast.show("已是最新版本")},2000)

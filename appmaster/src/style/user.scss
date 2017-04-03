@@ -4,8 +4,10 @@
 @import './user-order';
 @import './user-collect';
 @import './user-setup.scss';
+@import './user-account.scss';
+
 header.yo-header{
-    font-size: 16px;
+    font-size: 0.16rem;
 }
 
 .user-header{
@@ -17,27 +19,27 @@ header.yo-header{
   $bgcolor: #fff,
   $border-width: 0,
   $item-ico-color: #000,
-  $font-size: 20px,
+  $font-size: 0.2rem,
   $color:#000
 )
 .user-banner{
     background:#f00;
     width: 100%;
-    height: 116px;
+    height: 1.16rem;
     @include flexbox();
     @include align-items(center);
     background: url(/img/headBG.jpg);
     .user-box{
         width: 100%;
-        height: 116px;
+        height: 1.16rem;
         @include flexbox();
         @include flex-direction(column);
         @include justify-content(space-between);
         span.touxiang{
             display: inline-block;
             text-align: center;
-            font-size:50px;
-            margin-top: -20px;
+            font-size:0.50rem;
+            margin-top: -0.20rem;
             color: #ccc;
         }
     }
@@ -47,28 +49,28 @@ header.yo-header{
      background:#ebebeb;
      .user-banner{
         width: 100%;
-        height: 116px;
+        height: 1.16rem;
         @include flexbox();
         @include align-items(center);
         .user-box{
             width: 100%;
-            height: 60px;
+            height: 0.60rem;
             @include flexbox();
             @include flex-direction(column);
             @include justify-content(space-between);
             @include align-items(center);
             p{
-                font-size: 16px;
+                font-size: 0.16rem;
                 color: #fff;
             }
             .box{
-                width: 110px;
-                height: 30px;
+                width: 1.10rem;
+                height: 0.30rem;
                 background: #f9e3c1;
-                border-radius: 5px;
+                border-radius: 0.05rem;
                 text-align: center;
-                line-height: 30px;
-                font-size: 16px;
+                line-height: 0.30rem;
+                font-size: 0.16rem;
                 a{
                   color: #452a00;
                 }
@@ -76,7 +78,7 @@ header.yo-header{
         }
     }
     .user-list{
-        margin-top: 13px;
+        margin-top: 0.13rem;
         width: 100%;
         height: auto;
         ul{
@@ -85,17 +87,17 @@ header.yo-header{
             background: #fff;
             li{
                 width: 100%;
-                height: 52px;
+                height: 0.52rem;
                 @include border(0 0 2px 0,#ebebeb);
                 a{
                     display:block;
                     color: #000;
                     width: 100%;
-                    line-height: 52px;
-                    font-size: 18px;
+                    line-height: 0.52rem;
+                    font-size: 0.16rem;
                     img{
-                        width: 33px;
-                        height: 33px;
+                        width: 0.33rem;
+                        height: 0.33rem;
                         margin: 0 6px;
                     }
                 }

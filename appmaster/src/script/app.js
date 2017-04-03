@@ -1,11 +1,8 @@
-import '../style/app.scss'
-import {Provider} from 'react-redux'
-import { store } from "./redux/store"
+require('../style/app.scss')
 import Home from "./component/home.js"
 import User from "./component/user.js"
 import Cart from "./component/cart.js"
 import Search from "./component/search.js"
-import List from "./component/list.js"
 import Service from "./component/service.js"
 import Address from "./usercomponent/address.js"
 import Help from "./usercomponent/help.js"
@@ -19,18 +16,26 @@ import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
 import Userheader from "./component/user-head"
+
 import Setup from "./usercomponent/setup.js"
 import Suggestion from "./usercomponent/suggestion.js"
 import Homeheader from './component/home-head' 
 import Searchheader from './component/search-head' 
 import Cartheader from './component/cart-head' 
 import Serverheader from './component/server-head'
+import Eyuan from './usercomponent/eyuan'
+import Yfu from './usercomponent/yfu'
 
+
+
+import { store } from './redux/store'
+import {Provider} from 'react-redux'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import  {Router,Route,IndexRoute,IndexRedirect,Link,hashHistory} from 'react-router'
 import Index from './component/index'
+import List from "./component/list.js"
+import  {Router,Route,IndexRoute,IndexRedirect,Link,hashHistory} from 'react-router'
 ReactDOM.render(
 	<Provider store={store}>
 	<Router history={hashHistory}>
@@ -42,9 +47,15 @@ ReactDOM.render(
 			<Route path="user" com={<Userheader/>} component={User}></Route>
 			<Route path="service" com={<Serverheader/>} component={Service}></Route>
 		</Route>
+
+		<Route path="list" component={List}></Route>
 		<Route path="/myorder" component={Myorder}/>
 		<Route path="/collect" component={Collect}/>
-		<Route path="/account" component={Account}/>
+		<Route path="/account" component={Account}>
+			<IndexRedirect to="eyuan"></IndexRedirect>
+			<Route path="eyuan" component={Eyuan}></Route>
+			<Route path="yfu" component={Yfu}></Route>
+		</Route>
 		<Route path="/history" component={Historyorder}/>
 		<Route path="/help" component={Help}/>
 		<Route path="/address" component={Address}/>
