@@ -4,6 +4,7 @@ import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 import { Link, browserHistory } from 'react-router'
 import Toast from "../../component_dev/toast/src"
 
+
 class Suggestion extends React.Component{
 	constructor(props){
 		super(props)

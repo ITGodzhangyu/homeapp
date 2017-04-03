@@ -38,27 +38,27 @@ class Index extends React.Component{
 					<footer>
 						<ul>
 							<li>
-								<Link to="/home" title="首页" onClick={this.addtitle.bind(this,"首页")} activeClassName="active">
+								<Link to="/home" title="首页"  activeClassName="active">
 								<i className="yo-ico">&#xe611;</i><span>首页</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/search" title="" onClick={this.addtitle.bind(this,"搜索")} activeClassName="active">
+								<Link to="/search" title="" activeClassName="active">
 								<i className="yo-ico">&#xe502;</i><span>导航</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/user" title="用户中心" onClick={this.addtitle.bind(this,"我的")} activeClassName="active">
+								<Link to="/user" title="用户中心" activeClassName="active">
 								<i className="yo-ico">&#xe653;</i><span>我的</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/cart"  title="购物车" onClick={this.addtitle.bind(this,"购物车")} activeClassName="active">
+								<Link to="/cart"  title="购物车"  activeClassName="active">
 								<i className="yo-ico">&#xe66a;</i><span>购物车</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/service"  title="客服" onClick={this.addtitle.bind(this,"客服")} activeClassName="active">
+								<Link to="/service"  title="客服"  activeClassName="active">
 								<i className="yo-ico">&#xe76a;</i><span>客服</span>
 								</Link>
 							</li>
@@ -86,8 +86,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Index)
-
-
-
-
-

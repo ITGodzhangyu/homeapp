@@ -17,7 +17,6 @@
     }
     
 }
-
 .yo-header-s{
     background: #fff;
     .affirm{
@@ -35,14 +34,14 @@
             float: right;
             width: 90%;
             height:100%;
+            color:#000;
             border: none;
             background: #F7F7F7;
         }
-        img{
-            width:23px;
-            height: 23px;
+        i{
             float: left;
-            margin-top: 3px;
+            line-height: 30px;
         }
     }
 }
+

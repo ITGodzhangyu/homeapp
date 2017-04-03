@@ -10,7 +10,7 @@ class Searchheader extends React.Component{
 	render(){
 		return (
 			<header className="yo-header yo-header-s">
-				<p className="regret"><img src="/img/search.png"/><input type="text" placeholder="搜索"/></p>
+				<p className="regret"><i className="yo-ico">&#xe502;</i><input type="text" placeholder="搜索"/></p>
 				<span className="affirm">取消</span>
 			</header>
 		)

@@ -17,7 +17,6 @@ class kindList extends React.Component{
 	}
 	filter(str){
 		var strArry=Array(Object(str))[0];
-		console.log(strArry)
 		var strlen=strArry.length;
 		var numlist=[];
 		fetchData('./json/list.json',function(res){
@@ -37,16 +36,18 @@ class kindList extends React.Component{
 					}
 					if(num==strlen){		
 						numlist.push(item);
-						console.log(numlist);
 					}
 				}
 		   		if(numlist.length>0){
 		   			let flist=numlist.map(val=>{
 			       		return (<li>
-				       			<List.LazyImage  className="goodsImg" src={val.goodsImg}/>
+				       			<Link to={`/detail/${val.Sn}`}><List.LazyImage  className="goodsImg" src={val.goodsImg}/></Link>
+				       			<p>{val.Caption}</p>
 				       			<div className="goodsPrice">
-				       				<span>{val.Price}</span>
-				       				<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
+				       				<span>￥{val.Price}</span>
+				       				<Link to="cart"  title="购物车" activeClassName="active">
+		       							<List.LazyImage onClick={this.add.bind(this,val.Sn)} src="http://m.6688.com/img/search/shopcar.jpg"/>
+		       						</Link>
 				       			</div>
 			       			</li>)
 			      	})
@@ -58,13 +59,16 @@ class kindList extends React.Component{
 			    }
 	   		}else{
 		      	let flist=data.map(val=>{
-		       		return (<li>
-			       			<List.LazyImage  className="goodsImg" src={val.goodsImg}/>
-			       			<p>{val.catalogName}</p>
-			       			<div className="goodsPrice">
-			       				<span>{val.Price}</span>
-			       				<List.LazyImage src="http://m.6688.com/img/search/shopcar.jpg"/>
-			       			</div>
+		       		return (
+		       		<li>
+		       			<Link to={`/detail/${val.Sn}`}><List.LazyImage  className="goodsImg" src={val.goodsImg}/></Link>
+		       			<p>{val.Caption}</p>
+		       			<div className="goodsPrice">
+		       				<span>{val.Price}</span>
+		       				<Link to="cart"  title="购物车"  activeClassName="active">
+		       					<List.LazyImage onClick={this.add.bind(this,val.Sn)} src="http://m.6688.com/img/search/shopcar.jpg"/>
+		       				</Link>
+		       			</div>
 		       		</li>)
 		       	})
 		      	this.setState({
@@ -97,15 +101,21 @@ class kindList extends React.Component{
 			str:e.target.value
 		})
 	}
+	add(Snn){
+		alert(Snn)
+		if(localStorage.getItem("Sn")){
+			var Sn=localStorage.getItem("Sn");
+			Sn+=Snn+",";
+			localStorage.setItem("Sn",Sn)
+		}else{
+			localStorage.setItem("Sn",Snn+",");
+		}
+	}
 	newFilter(){
 		this.filter(this.state.str)
 	}
 	componentDidMount(){
-		this.filter("太")
-//		this.setState({
-//			str:this.props
-//		})
-//		console.log(this.props.router)
+		this.filter(this.props.params.id);
 	}
 }
 export default kindList;

@@ -10,8 +10,12 @@ class Carheader extends React.Component{
 	render(){
 		return (
 			<header className="yo-header yo-header-cart">
+				<Link to="/home">
+						<div className="cart_gohome">
+							<i className="yo-ico">&#xe611;</i>
+						</div>
+				</Link>
 				<p className="title">购物车</p>
-				<span className="affirm">删除</span>
 			</header>
 		)
 	}

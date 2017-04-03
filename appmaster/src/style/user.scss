@@ -54,7 +54,7 @@ header.yo-header{
         @include align-items(center);
         .user-box{
             width: 100%;
-            height: 0.60rem;
+            height: .6rem;
             @include flexbox();
             @include flex-direction(column);
             @include justify-content(space-between);
@@ -78,7 +78,7 @@ header.yo-header{
         }
     }
     .user-list{
-        margin-top: 0.13rem;
+        margin-top: .13rem;
         width: 100%;
         height: auto;
         ul{
@@ -87,25 +87,25 @@ header.yo-header{
             background: #fff;
             li{
                 width: 100%;
-                height: 0.52rem;
+                height: .52rem;
                 @include border(0 0 2px 0,#ebebeb);
                 a{
                     display:block;
                     color: #000;
                     width: 100%;
-                    line-height: 0.52rem;
-                    font-size: 0.16rem;
+                    line-height: .52rem;
+                    font-size: .18rem;
                     img{
-                        width: 0.33rem;
-                        height: 0.33rem;
-                        margin: 0 6px;
+                        width: .33rem;
+                        height: .33rem;
+                        margin: 0 .06rem;
                     }
                 }
                 span{
                     color: #ebebeb;
                     font-weight: bold;
                     float: right;
-                    margin-right: 5px;
+                    margin-right: 0.05rem;
                 }
             }
         }

@@ -1,7 +1,6 @@
 a{
     color: #000;
 }
-
 .newaddress{
     width: 100%;
     height: auto;
@@ -14,8 +13,8 @@ a{
         margin-bottom: 0.20rem;
         span{
             float: left;
-            margin-right: 0.10rem;
-            width: 0.90rem;
+            margin-right: 10px;
+            width: 90px;
             text-align: right;
         }
         div{
@@ -93,7 +92,6 @@ a{
                     width: 100%;
                     height: 0.30rem;
                 }
-
             }
             .choosen{
                 float: right;
