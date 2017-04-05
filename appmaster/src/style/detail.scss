@@ -128,6 +128,9 @@
                 width:100%;
                 margin:.1rem 3% 0;
                 font:.14rem ;
+                span{
+                    margin-right:.3rem ;
+                }
             }
         }
         .detail_pronum{
@@ -209,13 +212,14 @@
                 height:1.8rem;
                 overflow:hidden;
                 background:#fff;
-                .disinfo{
+                .disPro{
                     height:1.8rem;
                     width:1rem;
                     margin:0 .05rem 0.05rem;
                     float:left;
                     a{
                         display:block;
+                        color:#000;
                         img{
                             height:1.5rem;
                             width:1rem;
@@ -235,6 +239,7 @@
         }
         .detail_show{
             height:12rem;
+            margin-top:0.1rem;
             .proImg{
                 height:2rem;
                 width:100%;
