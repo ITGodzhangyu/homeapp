@@ -4,8 +4,10 @@
 @import './user-order';
 @import './user-collect';
 @import './user-setup.scss';
+@import './user-account.scss';
+
 header.yo-header{
-    font-size: .16rem;
+    font-size: 0.16rem;
 }
 
 .user-header{
@@ -17,7 +19,7 @@ header.yo-header{
   $bgcolor: #fff,
   $border-width: 0,
   $item-ico-color: #000,
-  $font-size: .2rem,
+  $font-size: 0.2rem,
   $color:#000
 )
 .user-banner{
@@ -33,9 +35,12 @@ header.yo-header{
         @include flexbox();
         @include flex-direction(column);
         @include justify-content(space-between);
-        img{
-            width: .5rem;
-            height: .5rem;
+        span.touxiang{
+            display: inline-block;
+            text-align: center;
+            font-size:0.50rem;
+            margin-top: -0.20rem;
+            color: #ccc;
         }
     }
 }
@@ -54,18 +59,22 @@ header.yo-header{
             @include flex-direction(column);
             @include justify-content(space-between);
             @include align-items(center);
+            img{
+                width:0.5rem;
+                height:0.5rem;
+            }
             p{
-                font-size: .16rem;
+                font-size: 0.16rem;
                 color: #fff;
             }
             .box{
-                width: 1.1rem;
-                height: .3rem;
+                width: 1.10rem;
+                height: 0.30rem;
                 background: #f9e3c1;
-                border-radius: .05px;
+                border-radius: 0.05rem;
                 text-align: center;
-                line-height: .3rem;
-                font-size: .16rem;
+                line-height: 0.30rem;
+                font-size: 0.16rem;
                 a{
                   color: #452a00;
                 }
@@ -83,7 +92,7 @@ header.yo-header{
             li{
                 width: 100%;
                 height: .52rem;
-                @include border(0 0 .02px 0,#ebebeb);
+                @include border(0 0 2px 0,#ebebeb);
                 a{
                     display:block;
                     color: #000;
@@ -106,4 +115,3 @@ header.yo-header{
         }
     }
 }
-

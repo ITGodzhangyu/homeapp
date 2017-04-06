@@ -73,14 +73,14 @@ class Cart extends React.Component{
 											<h4>第二件特价</h4>
 											<Scroller extraClass ="yo-scroller yo-pro" scrollX={true} scrollY={false}>
 												<div className="tepro">
-												  	
-											  </div>
+												  	{this.state.disprice}
+											  	</div>
 											</Scroller>
 									</div>
-									<div className="detail_show"></div>
+									<div className="detail_show">{this.state.dataImg}</div>
 								</div>
 								<div>
-									{this.state.dataImg}
+									
 								</div>
 						</div>	
 				</Scroller>
@@ -162,11 +162,30 @@ class Cart extends React.Component{
 			let dataImg=data.map(val=>{
 				return (
 					<img src={val.img} />
+					
 				)
 			})
 			
 			this.setState({
 				dataImg:dataImg
+			})
+		}.bind(this))
+	    //第二件特价
+	     fetchData('./json/tejia.json',function(res){
+			var data=eval(res);
+			let disprice=data.map(val=>{
+				return (
+					<div className="disPro">
+						<a>
+							<img src={val.goodsImg} />
+							<p>{val.Caption}</p>
+						</a>
+					</div>
+				)
+			})
+			
+			this.setState({
+				disprice:disprice
 			})
 		}.bind(this))
 	}
@@ -182,6 +201,7 @@ class Cart extends React.Component{
    		}
 	}
 	filter(str){
+		console.log(str)
 		var strArry=Array(Object(str))[0];
 		var numlist=[];
 		fetchData('./json/list.json',function(res){

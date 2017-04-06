@@ -8,10 +8,12 @@ class Address extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			title:"新建地址"
+			arr:[],
+			_arr:[]
 		}
 	}
 	render(){
+		
 		return (
 			<div className="main">
 				<header className="yo-header yo-header-c">
@@ -21,22 +23,7 @@ class Address extends React.Component{
 		       </header>
 		       <section>
 		       		<ul className='user-address'>
-		       			<li className='Saveaddress'>
-		       				<div className='addressinfo'>
-		       					<div className='addressDetail'>
-		       						<span className='address_name'>大健康</span>
-		       						<span className='phonenumber'>15733665467</span>
-		       					</div>
-		       					<div className='choosen'>
-		       						<span className="ischoosen">
-		       							<img src="/img/Chosen.png"/>
-		       						</span>
-		       					</div>
-		       				</div>
-		       				<div className='reviseAddress'>
-		       					<a href="#/editaddress"><img src='/img/edit.png'/></a>
-		       				</div>
-		       			</li>
+		       			{this.state._arr}
 		       		</ul>
 		       </section>
 	       	</div>	
@@ -45,13 +32,53 @@ class Address extends React.Component{
 	back() {
    		 browserHistory.goBack()
   	}
+	componentWillMount(){
+		if(window.localStorage){
+	    	var address=localStorage.getItem("address");
+			var list=[]
+			if(address!=null){
+				address.split("#").map(function(item){
+					if(item!="null"&&item!=""){
+						list.push(JSON.parse(item))
+					}
+				})
+			}
+				
+			this.setState({
+				arr:list
+			})
+	 	}
+	}
 	componentDidMount() {
 	    let title = '我的地址'
 	    this.props.onChange({
 	      type: 'SETTITLE',
 	      title: title
 	    })
-	 }
+	    var _list=[]
+	    this.state.arr.map(function(item,index){
+	    	_list.push(<li className='Saveaddress' data={index}>
+							<div className='addressinfo'>
+								<div className='addressDetail'>
+									<span className='address_name'>{item.name}</span>
+									<span className='phonenumber'>{item.phone}</span>
+									<div className="local">{item._area}</div>
+								</div>
+								<div className='choosen'>
+									<span className="ischoosen">
+										<img src="/img/Chosen.png"/>
+									</span>
+								</div>
+							</div>
+							<div className='reviseAddress'>
+								<a href={'#/editaddress/'+index}><img src='/img/edit.png'/></a>
+							</div>
+						</li>)
+	    })
+	    this.setState({
+	    	_arr:_list
+	    })
+	}    
 }
 export default connect(
   mapStateToProps,

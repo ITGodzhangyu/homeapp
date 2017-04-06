@@ -9,7 +9,17 @@
 @import "./lib/ani/elastic-out-down";
 @font-face {
   font-family: yofont;
-  src: url(/iconfont/iconfont.woff) format("woff"), url(/iconfont/iconfont.ttf) format("truetype"); 
+  src: url(/iconfont/iconfont.woff) format("woff"),
+   url(/iconfont/iconfont.ttf) format("truetype");
+}
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfontuser.woff) format("woff"),
+   url(/iconfont/iconfontuser.ttf) format("truetype");
+}
+a{
+    color: #000;
+    font-size: 0.14rem;
 }
 @font-face {
   font-family: yofont;

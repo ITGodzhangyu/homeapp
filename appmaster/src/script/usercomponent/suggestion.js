@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 import { Link, browserHistory } from 'react-router'
 import Toast from "../../component_dev/toast/src"
-import {loading} from '../../component_dev/loading/src/loading'
+
 
 class Suggestion extends React.Component{
 	constructor(props){
@@ -36,11 +36,11 @@ class Suggestion extends React.Component{
 		)
 	}
 	back() {
-   		 browserHistory.goBack()
+   		 window.location.href="#/setup"
   	}
 	sub(){
-		Toast.show("反馈成功",3000)
-		window.location.href="#/setup"
+		setTimeout(function(){Toast.show("反馈成功",2000)},2000)
+		setTimeout(function(){window.location.href="#/setup"},4000)
 	}
 	componentDidMount() {
 	    let title = '我的订单'

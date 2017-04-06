@@ -19,3 +19,16 @@
   $font-size: .2rem,
   $color:#000
 )
+.yo-header-c{
+    .title{
+        font-size: 18px;
+    }
+}
+@include yo-header(
+  $name:h,
+  $bgcolor: #ffac0d,
+  $border-width: 0,
+  $item-ico-color: #000,
+  $font-size: 20px,
+  $color:#000
+)

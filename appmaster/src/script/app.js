@@ -19,13 +19,19 @@ import Newaddress from "./usercomponent/newaddress.js"
 import Forget from "./usercomponent/forget.js"
 import EditAddress from "./usercomponent/editAddress.js"
 import Userheader from "./component/user-head"
+
 import Setup from "./usercomponent/setup.js"
 import Suggestion from "./usercomponent/suggestion.js"
 import Homeheader from './component/home-head' 
 import Searchheader from './component/search-head' 
 import Cartheader from './component/cart-head' 
 import Serverheader from './component/server-head'
+import Eyuan from './usercomponent/eyuan'
+import Yfu from './usercomponent/yfu'
+
+
 import Detail   from './component/detail'
+
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -42,10 +48,16 @@ ReactDOM.render(
 			<Route path="user" com={<Userheader/>} component={User}></Route>
 			<Route path="service" com={<Serverheader/>} component={Service}></Route>
 		</Route>
+
+		<Route path="list" component={List}></Route>
 		<Route path="/myorder" component={Myorder}/>
 		<Route path="/detail/:Sn" component={Detail}/>
 		<Route path="/collect" component={Collect}/>
-		<Route path="/account" component={Account}/>
+		<Route path="/account" component={Account}>
+			<IndexRedirect to="eyuan"></IndexRedirect>
+			<Route path="eyuan" component={Eyuan}></Route>
+			<Route path="yfu" component={Yfu}></Route>
+		</Route>
 		<Route path="/history" component={Historyorder}/>
 		<Route path="/help" component={Help}/>
 		<Route path="/address" component={Address}/>
@@ -54,11 +66,12 @@ ReactDOM.render(
 		<Route path="/newaddress" component={Newaddress}/>
 		<Route path="/forget" component={Forget}/>
 		<Route path="/editaddress/:type" component={EditAddress}/>
+
 		<Route path="/list/:id" component={List}></Route>
+
 		<Route path="/setup" component={Setup}></Route>
 		<Route path="/suggestion" component={Suggestion}></Route>
 	</Router>
 	</Provider>,
 	document.getElementById("root")
 )
-
