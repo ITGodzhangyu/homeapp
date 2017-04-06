@@ -14,9 +14,11 @@ class Homeheader extends React.Component{
 		return (
 			<div className="header">
 				<img className="index-logo" src="http://m.6688.com/img/newIndex/201607/logo.png"/>
-				<div className="index-search">
+				<Link className="index-search" to="/search">
+			
 					<i className="yo-ico">&#xe502;</i>						
-				</div>
+				
+				</Link>
 				<i className="yo-ico">&#xe82e;</i>
 			</div>
 		)
