@@ -15,7 +15,7 @@ class Carheader extends React.Component{
 							<i className="yo-ico">&#xe611;</i>
 						</div>
 				</Link>
-				<p className="title">购物车</p>
+				<p className="title">购物车hahaha</p>
 			</header>
 		)
 	}
